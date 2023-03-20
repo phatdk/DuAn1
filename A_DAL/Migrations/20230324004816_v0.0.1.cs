@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace A_DAL.Migrations
 {
-    public partial class v01 : Migration
+    public partial class v001 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -27,6 +27,7 @@ namespace A_DAL.Migrations
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    MaKm = table.Column<string>(type: "nvarchar(100)", nullable: false),
                     NgayTao = table.Column<DateTime>(type: "datetime", nullable: false),
                     NgayBd = table.Column<DateTime>(type: "datetime", nullable: false),
                     NgayKt = table.Column<DateTime>(type: "datetime", nullable: false),
@@ -59,6 +60,7 @@ namespace A_DAL.Migrations
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    MaNv = table.Column<string>(type: "varchar(13)", nullable: false),
                     HoTen = table.Column<string>(type: "nvarchar(100)", nullable: false),
                     GioiTinh = table.Column<int>(type: "int", nullable: false),
                     Sdt = table.Column<string>(type: "varchar(13)", nullable: false),

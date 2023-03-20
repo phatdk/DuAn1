@@ -9,6 +9,7 @@ namespace A_DAL.Models
     public class KhuyenMai
     {
         public Guid Id { get; set; }
+        public string Ten { get; set; }
         public DateTime NgayTao { get; set; }
         public DateTime NgayBd { get; set; }
         public DateTime NgayKt { get; set; }

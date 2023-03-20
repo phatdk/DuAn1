@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace A_DAL.Migrations
 {
     [DbContext(typeof(CofffeeDbContext))]
-    [Migration("20230320080825_v0.1")]
-    partial class v01
+    [Migration("20230324080405_v0.0.2")]
+    partial class v002
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -114,6 +114,10 @@ namespace A_DAL.Migrations
                     b.Property<int>("SoTienGiam")
                         .HasColumnType("int");
 
+                    b.Property<string>("Ten")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(100)");
+
                     b.Property<int>("TrangThai")
                         .HasColumnType("int");
 
@@ -156,6 +160,10 @@ namespace A_DAL.Migrations
                     b.Property<string>("HoTen")
                         .IsRequired()
                         .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("MaNv")
+                        .IsRequired()
+                        .HasColumnType("varchar(13)");
 
                     b.Property<string>("MatKhau")
                         .IsRequired()

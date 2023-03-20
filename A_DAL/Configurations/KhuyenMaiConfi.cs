@@ -13,6 +13,7 @@ namespace A_DAL.Configurations
     {
         public void Configure(EntityTypeBuilder<KhuyenMai> builder)
         {
+            builder.Property(p => p.Ten).HasColumnType("nvarchar(100)");
             builder.Property(p => p.NgayTao).HasColumnType("datetime");
             builder.Property(p => p.NgayBd).HasColumnType("datetime");
             builder.Property(p => p.NgayKt).HasColumnType("datetime");

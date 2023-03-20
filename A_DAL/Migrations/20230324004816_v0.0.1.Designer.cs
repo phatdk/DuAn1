@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace A_DAL.Migrations
 {
     [DbContext(typeof(CofffeeDbContext))]
-    [Migration("20230320083027_v1.1")]
-    partial class v11
+    [Migration("20230324004816_v0.0.1")]
+    partial class v001
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -94,6 +94,10 @@ namespace A_DAL.Migrations
                     b.Property<string>("DkGiam")
                         .IsRequired()
                         .HasColumnType("nvarchar(50)");
+
+                    b.Property<string>("MaKm")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(100)");
 
                     b.Property<string>("MoTa")
                         .IsRequired()

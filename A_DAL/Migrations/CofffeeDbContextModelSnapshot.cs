@@ -112,6 +112,10 @@ namespace A_DAL.Migrations
                     b.Property<int>("SoTienGiam")
                         .HasColumnType("int");
 
+                    b.Property<string>("Ten")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(100)");
+
                     b.Property<int>("TrangThai")
                         .HasColumnType("int");
 
