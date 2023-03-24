@@ -7,7 +7,7 @@ using A_DAL.Models;
 
 namespace A_DAL.IRespositorys
 {
-	internal interface IBanRespositorys
+	public interface IBanRespositorys
 	{
 		bool AddBan(Ban obj);
 
