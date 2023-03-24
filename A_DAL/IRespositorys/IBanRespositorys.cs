@@ -7,14 +7,15 @@ using A_DAL.Models;
 
 namespace A_DAL.IRespositorys
 {
-	internal interface IBanRespositorys
+	public interface IBanRespositorys
 	{
 		bool AddBan(Ban obj);
 
-		bool DeleteBan(Ban obj);
+		bool DeleteBan(Guid id);
 
 		bool UpdateBan(Ban obj);
 
 		List<Ban> GetAllBan();
+		Ban GetBanByid(Guid id);
 	}
 }
