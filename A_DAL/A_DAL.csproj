@@ -19,9 +19,4 @@
     </PackageReference>
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="IRespositorys\" />
-    <Folder Include="Respositorys\" />
-  </ItemGroup>
-
 </Project>
