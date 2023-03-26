@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace A_DAL.Respositorys
+namespace B_BUS.Services
 {
-	internal class KhuyenMaiIRespositorys
+	internal class HoaDonServices
 	{
 	}
 }

@@ -11,10 +11,11 @@ namespace A_DAL.IRespositorys
 	{
 		bool AddBan(Ban obj);
 
-		bool DeleteBan(Ban obj);
+		bool DeleteBan(Guid id);
 
 		bool UpdateBan(Ban obj);
 
 		List<Ban> GetAllBan();
+		Ban GetBanByid(Guid id);
 	}
 }
