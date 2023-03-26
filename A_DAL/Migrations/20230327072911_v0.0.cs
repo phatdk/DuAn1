@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace A_DAL.Migrations
 {
-    public partial class v001 : Migration
+    public partial class v00 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -27,7 +27,7 @@ namespace A_DAL.Migrations
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    MaKm = table.Column<string>(type: "nvarchar(100)", nullable: false),
+                    Ten = table.Column<string>(type: "nvarchar(100)", nullable: false),
                     NgayTao = table.Column<DateTime>(type: "datetime", nullable: false),
                     NgayBd = table.Column<DateTime>(type: "datetime", nullable: false),
                     NgayKt = table.Column<DateTime>(type: "datetime", nullable: false),
@@ -80,7 +80,6 @@ namespace A_DAL.Migrations
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     IdLoai = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    IdKm = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     TenSp = table.Column<string>(type: "nvarchar(50)", nullable: false),
                     HinhAnh = table.Column<string>(type: "varchar(max)", nullable: false),
                     MoTa = table.Column<string>(type: "nvarchar(100)", nullable: false),
@@ -90,12 +89,6 @@ namespace A_DAL.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_sanPhams", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_SPKM",
-                        column: x => x.IdKm,
-                        principalTable: "khuyenMais",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_SPLoai",
                         column: x => x.IdLoai,
@@ -110,6 +103,7 @@ namespace A_DAL.Migrations
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     IdNv = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    IdKm = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     NgayTao = table.Column<DateTime>(type: "datetime", nullable: false),
                     NgayThanhToan = table.Column<DateTime>(type: "datetime", nullable: false),
                     TongTien = table.Column<int>(type: "int", nullable: false),
@@ -118,6 +112,12 @@ namespace A_DAL.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_hoaDons", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_KMHD",
+                        column: x => x.IdKm,
+                        principalTable: "khuyenMais",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_NVHD",
                         column: x => x.IdNv,
@@ -182,14 +182,14 @@ namespace A_DAL.Migrations
                 column: "IdHd");
 
             migrationBuilder.CreateIndex(
+                name: "IX_hoaDons_IdKm",
+                table: "hoaDons",
+                column: "IdKm");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_hoaDons_IdNv",
                 table: "hoaDons",
                 column: "IdNv");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_sanPhams_IdKm",
-                table: "sanPhams",
-                column: "IdKm");
 
             migrationBuilder.CreateIndex(
                 name: "IX_sanPhams_IdLoai",
@@ -220,10 +220,10 @@ namespace A_DAL.Migrations
                 name: "sanPhams");
 
             migrationBuilder.DropTable(
-                name: "nhanViens");
+                name: "khuyenMais");
 
             migrationBuilder.DropTable(
-                name: "khuyenMais");
+                name: "nhanViens");
 
             migrationBuilder.DropTable(
                 name: "loaiSps");

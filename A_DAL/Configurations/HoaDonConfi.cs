@@ -18,6 +18,7 @@ namespace A_DAL.Configurations
             builder.Property(p => p.TrangThai).HasColumnType("int");
             builder.Property(p=>p.TongTien).HasColumnType("int");
             builder.HasOne(p => p.NhanVien).WithMany(p => p.HoaDons).HasForeignKey(p => p.IdNv).HasConstraintName("FK_NVHD");
+            builder.HasOne(p => p.KhuyenMai).WithMany(p => p.HoaDons).HasForeignKey(p => p.IdKm).HasConstraintName("FK_KMHD");
         }
     }
 }

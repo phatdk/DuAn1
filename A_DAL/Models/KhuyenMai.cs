@@ -18,6 +18,6 @@ namespace A_DAL.Models
         public int SoTienGiam { get; set; }
         public string DkGiam { get; set; }
         public int TrangThai { get; set; }
-        public virtual List<SanPham> SanPhams { get; set; }
+        public virtual List<HoaDon> HoaDons { get; set; }
     }
 }

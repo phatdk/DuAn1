@@ -29,9 +29,20 @@ namespace A_DAL.Respositorys
 			}
 		}
 
-		public bool DeleteSP_HD(Guid id)
+		public bool DeleteSP_HD(SP_HD obj)
 		{
-			throw new NotImplementedException();
+			
+			try
+			{
+				var sp_hd = _context.sP_HDs.FirstOrDefault(p => p.IdHd == obj.IdHd && p.IdSp == obj.IdSp);
+				_context.sP_HDs.Remove(sp_hd);
+				_context.SaveChanges();
+				return true;
+			}
+			catch (Exception)
+			{
+				return false;
+			}
 		}
 
 		public List<SP_HD> GetAllSP_HD()
@@ -48,7 +59,7 @@ namespace A_DAL.Respositorys
 		{
 			try
 			{
-				var sp_hd = _context.sP_HDs.FirstOrDefault(c=>c.IdHd == obj.IdHd);
+				var sp_hd = _context.sP_HDs.FirstOrDefault(p => p.IdHd == obj.IdHd && p.IdSp == obj.IdSp);
 				sp_hd.DonGia = obj.DonGia;
 				sp_hd.SoLuong = obj.SoLuong;
 				_context.sP_HDs.Update(obj);

@@ -61,6 +61,9 @@ namespace A_DAL.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<Guid>("IdKm")
+                        .HasColumnType("uniqueidentifier");
+
                     b.Property<Guid>("IdNv")
                         .HasColumnType("uniqueidentifier");
 
@@ -77,6 +80,8 @@ namespace A_DAL.Migrations
                         .HasColumnType("int");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("IdKm");
 
                     b.HasIndex("IdNv");
 
@@ -196,9 +201,6 @@ namespace A_DAL.Migrations
                         .IsRequired()
                         .HasColumnType("varchar(max)");
 
-                    b.Property<Guid>("IdKm")
-                        .HasColumnType("uniqueidentifier");
-
                     b.Property<Guid>("IdLoai")
                         .HasColumnType("uniqueidentifier");
 
@@ -214,8 +216,6 @@ namespace A_DAL.Migrations
                         .HasColumnType("int");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("IdKm");
 
                     b.HasIndex("IdLoai");
 
@@ -265,6 +265,13 @@ namespace A_DAL.Migrations
 
             modelBuilder.Entity("A_DAL.Models.HoaDon", b =>
                 {
+                    b.HasOne("A_DAL.Models.KhuyenMai", "KhuyenMai")
+                        .WithMany("HoaDons")
+                        .HasForeignKey("IdKm")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired()
+                        .HasConstraintName("FK_KMHD");
+
                     b.HasOne("A_DAL.Models.NhanVien", "NhanVien")
                         .WithMany("HoaDons")
                         .HasForeignKey("IdNv")
@@ -272,26 +279,19 @@ namespace A_DAL.Migrations
                         .IsRequired()
                         .HasConstraintName("FK_NVHD");
 
+                    b.Navigation("KhuyenMai");
+
                     b.Navigation("NhanVien");
                 });
 
             modelBuilder.Entity("A_DAL.Models.SanPham", b =>
                 {
-                    b.HasOne("A_DAL.Models.KhuyenMai", "KhuyenMai")
-                        .WithMany("SanPhams")
-                        .HasForeignKey("IdKm")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired()
-                        .HasConstraintName("FK_SPKM");
-
                     b.HasOne("A_DAL.Models.LoaiSp", "LoaiSp")
                         .WithMany("SanPhams")
                         .HasForeignKey("IdLoai")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired()
                         .HasConstraintName("FK_SPLoai");
-
-                    b.Navigation("KhuyenMai");
 
                     b.Navigation("LoaiSp");
                 });
@@ -330,7 +330,7 @@ namespace A_DAL.Migrations
 
             modelBuilder.Entity("A_DAL.Models.KhuyenMai", b =>
                 {
-                    b.Navigation("SanPhams");
+                    b.Navigation("HoaDons");
                 });
 
             modelBuilder.Entity("A_DAL.Models.LoaiSp", b =>

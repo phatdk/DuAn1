@@ -365,45 +365,45 @@
             this.groupBox3.Controls.Add(this.btn_sua);
             this.groupBox3.Controls.Add(this.btn_them);
             this.groupBox3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.groupBox3.Location = new System.Drawing.Point(0, 623);
+            this.groupBox3.Location = new System.Drawing.Point(0, 449);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(441, 126);
-            this.groupBox3.TabIndex = 3;
+            this.groupBox3.Size = new System.Drawing.Size(441, 300);
+            this.groupBox3.TabIndex = 5;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Thao tác";
             // 
             // btn_clear
             // 
-            this.btn_clear.Location = new System.Drawing.Point(331, 49);
+            this.btn_clear.Location = new System.Drawing.Point(99, 231);
             this.btn_clear.Name = "btn_clear";
-            this.btn_clear.Size = new System.Drawing.Size(100, 34);
+            this.btn_clear.Size = new System.Drawing.Size(200, 50);
             this.btn_clear.TabIndex = 3;
             this.btn_clear.Text = "Clear";
             this.btn_clear.UseVisualStyleBackColor = true;
             // 
             // btn_xoa
             // 
-            this.btn_xoa.Location = new System.Drawing.Point(225, 49);
+            this.btn_xoa.Location = new System.Drawing.Point(99, 161);
             this.btn_xoa.Name = "btn_xoa";
-            this.btn_xoa.Size = new System.Drawing.Size(100, 34);
+            this.btn_xoa.Size = new System.Drawing.Size(200, 50);
             this.btn_xoa.TabIndex = 2;
             this.btn_xoa.Text = "Xóa";
             this.btn_xoa.UseVisualStyleBackColor = true;
             // 
             // btn_sua
             // 
-            this.btn_sua.Location = new System.Drawing.Point(119, 49);
+            this.btn_sua.Location = new System.Drawing.Point(99, 95);
             this.btn_sua.Name = "btn_sua";
-            this.btn_sua.Size = new System.Drawing.Size(100, 34);
+            this.btn_sua.Size = new System.Drawing.Size(200, 50);
             this.btn_sua.TabIndex = 1;
             this.btn_sua.Text = "Sửa";
             this.btn_sua.UseVisualStyleBackColor = true;
             // 
             // btn_them
             // 
-            this.btn_them.Location = new System.Drawing.Point(13, 49);
+            this.btn_them.Location = new System.Drawing.Point(99, 30);
             this.btn_them.Name = "btn_them";
-            this.btn_them.Size = new System.Drawing.Size(100, 34);
+            this.btn_them.Size = new System.Drawing.Size(200, 50);
             this.btn_them.TabIndex = 0;
             this.btn_them.Text = "Thêm";
             this.btn_them.UseVisualStyleBackColor = true;

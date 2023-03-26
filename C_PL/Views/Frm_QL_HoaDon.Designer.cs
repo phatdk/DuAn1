@@ -31,25 +31,28 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.dtg_view_hoadon = new System.Windows.Forms.DataGridView();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.dtg_view_chitiethoadon = new System.Windows.Forms.DataGridView();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btn_inhd = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.txt_timkiem = new System.Windows.Forms.TextBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.btn_inhoadon = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtg_view_hoadon)).BeginInit();
-            this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtg_view_chitiethoadon)).BeginInit();
+            this.panel1.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.groupBox4);
-            this.groupBox1.Controls.Add(this.groupBox3);
             this.groupBox1.Controls.Add(this.groupBox2);
+            this.groupBox1.Controls.Add(this.panel1);
+            this.groupBox1.Controls.Add(this.groupBox3);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
@@ -64,8 +67,8 @@
             this.groupBox4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox4.Location = new System.Drawing.Point(3, 104);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(525, 665);
-            this.groupBox4.TabIndex = 2;
+            this.groupBox4.Size = new System.Drawing.Size(1067, 263);
+            this.groupBox4.TabIndex = 4;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Danh sách hóa đơn";
             // 
@@ -77,8 +80,48 @@
             this.dtg_view_hoadon.Name = "dtg_view_hoadon";
             this.dtg_view_hoadon.RowHeadersWidth = 62;
             this.dtg_view_hoadon.RowTemplate.Height = 33;
-            this.dtg_view_hoadon.Size = new System.Drawing.Size(519, 635);
+            this.dtg_view_hoadon.Size = new System.Drawing.Size(1061, 233);
             this.dtg_view_hoadon.TabIndex = 0;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.dtg_view_chitiethoadon);
+            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.groupBox2.Location = new System.Drawing.Point(3, 367);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(1067, 402);
+            this.groupBox2.TabIndex = 3;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Chi tiết hóa đơn";
+            // 
+            // dtg_view_chitiethoadon
+            // 
+            this.dtg_view_chitiethoadon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtg_view_chitiethoadon.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dtg_view_chitiethoadon.Location = new System.Drawing.Point(3, 27);
+            this.dtg_view_chitiethoadon.Name = "dtg_view_chitiethoadon";
+            this.dtg_view_chitiethoadon.RowHeadersWidth = 62;
+            this.dtg_view_chitiethoadon.RowTemplate.Height = 33;
+            this.dtg_view_chitiethoadon.Size = new System.Drawing.Size(1061, 372);
+            this.dtg_view_chitiethoadon.TabIndex = 0;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.btn_inhd);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel1.Location = new System.Drawing.Point(1070, 104);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(200, 665);
+            this.panel1.TabIndex = 2;
+            // 
+            // btn_inhd
+            // 
+            this.btn_inhd.Location = new System.Drawing.Point(28, 253);
+            this.btn_inhd.Name = "btn_inhd";
+            this.btn_inhd.Size = new System.Drawing.Size(142, 57);
+            this.btn_inhd.TabIndex = 0;
+            this.btn_inhd.Text = "In hóa đơn";
+            this.btn_inhd.UseVisualStyleBackColor = true;
             // 
             // groupBox3
             // 
@@ -87,7 +130,7 @@
             this.groupBox3.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox3.Location = new System.Drawing.Point(3, 27);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(525, 77);
+            this.groupBox3.Size = new System.Drawing.Size(1267, 77);
             this.groupBox3.TabIndex = 1;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Lọc";
@@ -109,38 +152,6 @@
             this.txt_timkiem.Size = new System.Drawing.Size(327, 31);
             this.txt_timkiem.TabIndex = 0;
             // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.btn_inhoadon);
-            this.groupBox2.Controls.Add(this.dataGridView1);
-            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.groupBox2.Location = new System.Drawing.Point(528, 27);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(742, 742);
-            this.groupBox2.TabIndex = 0;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Chi tiết hóa đơn";
-            // 
-            // btn_inhoadon
-            // 
-            this.btn_inhoadon.Location = new System.Drawing.Point(175, 526);
-            this.btn_inhoadon.Name = "btn_inhoadon";
-            this.btn_inhoadon.Size = new System.Drawing.Size(137, 36);
-            this.btn_inhoadon.TabIndex = 1;
-            this.btn_inhoadon.Text = "In hóa đơn";
-            this.btn_inhoadon.UseVisualStyleBackColor = true;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 27);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.RowTemplate.Height = 33;
-            this.dataGridView1.Size = new System.Drawing.Size(736, 448);
-            this.dataGridView1.TabIndex = 0;
-            // 
             // Frm_QL_HoaDon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
@@ -152,10 +163,11 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dtg_view_hoadon)).EndInit();
+            this.groupBox2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dtg_view_chitiethoadon)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -163,13 +175,14 @@
         #endregion
 
         private GroupBox groupBox1;
-        private GroupBox groupBox4;
-        private DataGridView dtg_view_hoadon;
         private GroupBox groupBox3;
         private DateTimePicker dateTimePicker1;
         private TextBox txt_timkiem;
+        private GroupBox groupBox4;
         private GroupBox groupBox2;
-        private Button btn_inhoadon;
-        private DataGridView dataGridView1;
+        private Panel panel1;
+        private DataGridView dtg_view_hoadon;
+        private DataGridView dtg_view_chitiethoadon;
+        private Button btn_inhd;
     }
 }

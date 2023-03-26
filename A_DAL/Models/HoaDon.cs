@@ -10,12 +10,14 @@ namespace A_DAL.Models
     {
         public Guid Id { get; set; }
         public Guid IdNv { get; set; }
+        public Guid IdKm { get; set; }
         public DateTime NgayTao { get; set; }
         public DateTime NgayThanhToan { get; set; }
         public int TongTien { get; set; }
         public int TrangThai { get; set; }
         public virtual NhanVien NhanVien { get; set; }
+        public virtual KhuyenMai KhuyenMai { get; set; }
         public virtual List<Ban_HD> Ban_HDs { get; set; }
-        public virtual List<SP_HD> SP_HDs { get; set; } 
+        public virtual List<SP_HD> SP_HDs { get; set; }
     }
 }

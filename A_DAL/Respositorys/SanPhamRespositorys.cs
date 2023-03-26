@@ -60,7 +60,6 @@ namespace A_DAL.Respositorys
 			{
 				var idsp = _context.sanPhams.Find(obj.Id);
 				idsp.IdLoai = obj.IdLoai;
-				idsp.IdKm = obj.IdKm;
 				idsp.TenSp = obj.TenSp;
 				idsp.HinhAnh = obj.HinhAnh;
 				idsp.MoTa = obj.MoTa;

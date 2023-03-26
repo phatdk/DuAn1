@@ -125,14 +125,14 @@
             this.cb_trangthai.Items.AddRange(new object[] {
             "Hoạt động",
             "Không hoạt động"});
-            this.cb_trangthai.Location = new System.Drawing.Point(26, 166);
+            this.cb_trangthai.Location = new System.Drawing.Point(26, 203);
             this.cb_trangthai.Name = "cb_trangthai";
             this.cb_trangthai.Size = new System.Drawing.Size(388, 33);
             this.cb_trangthai.TabIndex = 3;
             // 
             // txt_tenloaisp
             // 
-            this.txt_tenloaisp.Location = new System.Drawing.Point(26, 83);
+            this.txt_tenloaisp.Location = new System.Drawing.Point(26, 120);
             this.txt_tenloaisp.Name = "txt_tenloaisp";
             this.txt_tenloaisp.Size = new System.Drawing.Size(388, 31);
             this.txt_tenloaisp.TabIndex = 2;
@@ -140,7 +140,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(26, 138);
+            this.label2.Location = new System.Drawing.Point(26, 175);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(89, 25);
             this.label2.TabIndex = 1;
@@ -149,7 +149,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(26, 55);
+            this.label1.Location = new System.Drawing.Point(26, 92);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(154, 25);
             this.label1.TabIndex = 0;
@@ -162,45 +162,45 @@
             this.groupBox5.Controls.Add(this.btn_sua);
             this.groupBox5.Controls.Add(this.btn_them);
             this.groupBox5.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.groupBox5.Location = new System.Drawing.Point(3, 482);
+            this.groupBox5.Location = new System.Drawing.Point(3, 308);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(434, 126);
-            this.groupBox5.TabIndex = 4;
+            this.groupBox5.Size = new System.Drawing.Size(434, 300);
+            this.groupBox5.TabIndex = 5;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Thao tác";
             // 
             // btn_clear
             // 
-            this.btn_clear.Location = new System.Drawing.Point(331, 49);
+            this.btn_clear.Location = new System.Drawing.Point(99, 231);
             this.btn_clear.Name = "btn_clear";
-            this.btn_clear.Size = new System.Drawing.Size(100, 34);
+            this.btn_clear.Size = new System.Drawing.Size(200, 50);
             this.btn_clear.TabIndex = 3;
             this.btn_clear.Text = "Clear";
             this.btn_clear.UseVisualStyleBackColor = true;
             // 
             // btn_xoa
             // 
-            this.btn_xoa.Location = new System.Drawing.Point(225, 49);
+            this.btn_xoa.Location = new System.Drawing.Point(99, 161);
             this.btn_xoa.Name = "btn_xoa";
-            this.btn_xoa.Size = new System.Drawing.Size(100, 34);
+            this.btn_xoa.Size = new System.Drawing.Size(200, 50);
             this.btn_xoa.TabIndex = 2;
             this.btn_xoa.Text = "Xóa";
             this.btn_xoa.UseVisualStyleBackColor = true;
             // 
             // btn_sua
             // 
-            this.btn_sua.Location = new System.Drawing.Point(119, 49);
+            this.btn_sua.Location = new System.Drawing.Point(99, 95);
             this.btn_sua.Name = "btn_sua";
-            this.btn_sua.Size = new System.Drawing.Size(100, 34);
+            this.btn_sua.Size = new System.Drawing.Size(200, 50);
             this.btn_sua.TabIndex = 1;
             this.btn_sua.Text = "Sửa";
             this.btn_sua.UseVisualStyleBackColor = true;
             // 
             // btn_them
             // 
-            this.btn_them.Location = new System.Drawing.Point(13, 49);
+            this.btn_them.Location = new System.Drawing.Point(99, 30);
             this.btn_them.Name = "btn_them";
-            this.btn_them.Size = new System.Drawing.Size(100, 34);
+            this.btn_them.Size = new System.Drawing.Size(200, 50);
             this.btn_them.TabIndex = 0;
             this.btn_them.Text = "Thêm";
             this.btn_them.UseVisualStyleBackColor = true;

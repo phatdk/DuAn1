@@ -60,6 +60,7 @@ namespace A_DAL.Respositorys
 			{
 				var hd = _context.hoaDons.Find(obj.Id);
 				hd.IdNv = obj.IdNv;
+				hd.IdKm = obj.IdKm;
 				hd.NgayTao = obj.NgayTao;
 				hd.NgayThanhToan = obj.NgayThanhToan;
 				hd.TongTien = obj.TongTien;
