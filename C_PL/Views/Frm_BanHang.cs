@@ -10,11 +10,11 @@ using System.Windows.Forms;
 
 namespace C_PL.Views
 {
-    public partial class Frm_BanHang : Form
-    {
-        public Frm_BanHang()
-        {
-            InitializeComponent();
-        }
-    }
+	public partial class Frm_BanHang : Form
+	{
+		public Frm_BanHang()
+		{
+			InitializeComponent();
+		}
+	}
 }

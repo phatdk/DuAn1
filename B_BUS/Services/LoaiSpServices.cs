@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace A_DAL.IRespositorys
+namespace B_BUS.Services
 {
-	internal interface IKhuyenMaiIRespositorys
+	internal class LoaiSpServices
 	{
 	}
 }

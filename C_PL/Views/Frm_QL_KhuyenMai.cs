@@ -10,11 +10,11 @@ using System.Windows.Forms;
 
 namespace C_PL.Views
 {
-    public partial class Frm_QL_KhuyenMai : Form
-    {
-        public Frm_QL_KhuyenMai()
-        {
-            InitializeComponent();
-        }
-    }
+	public partial class Frm_QL_KhuyenMai : Form
+	{
+		public Frm_QL_KhuyenMai()
+		{
+			InitializeComponent();
+		}
+	}
 }
