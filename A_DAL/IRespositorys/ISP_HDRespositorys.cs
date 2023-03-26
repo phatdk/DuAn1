@@ -11,7 +11,7 @@ namespace A_DAL.IRespositorys
 	{
 		bool AddSP_HD(SP_HD obj);
 
-		bool DeleteSP_HD(Guid id);
+		bool DeleteSP_HD(SP_HD obj);
 
 		bool UpdateSP_HD(SP_HD obj);
 

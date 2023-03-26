@@ -31,7 +31,17 @@ namespace A_DAL.Respositorys
 
 		public bool DeleteBan_HD(Ban_HD obj)
 		{
-			throw new NotImplementedException();
+			try
+			{
+				var ban_hd = _context.ban_HDs.FirstOrDefault(c => c.IdHd == obj.IdHd);
+				_context.ban_HDs.Remove(ban_hd);
+				_context.SaveChanges();
+				return true;
+			}
+			catch (Exception)
+			{
+				return false;
+			}
 		}
 
 		public List<Ban_HD> GetAllBan_HD()
@@ -48,7 +58,9 @@ namespace A_DAL.Respositorys
 		{
 			try
 			{
-				_context.ban_HDs.Update(obj);
+				var ban_hd = _context.ban_HDs.FirstOrDefault(c => c.IdBan == obj.IdBan && c.IdHd == obj.IdHd);
+				//var idban = _context.ban_HDs.FirstOrDefault(c => c.IdBan == obj.IdBan); 
+				_context.ban_HDs.Update(ban_hd);
 				_context.SaveChanges();
 				return true;
 			}
