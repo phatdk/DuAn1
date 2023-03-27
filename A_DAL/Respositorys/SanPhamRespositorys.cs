@@ -8,7 +8,7 @@ using A_DAL.IRespositorys;
 
 namespace A_DAL.Respositorys
 {
-	internal class SanPhamRespositorys : ISanPhamRespositorys
+	public class SanPhamRespositorys : ISanPhamRespositorys
 	{
 		CofffeeDbContext _context;
 		public SanPhamRespositorys()

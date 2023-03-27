@@ -24,7 +24,7 @@ namespace A_DAL.Models
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             base.OnConfiguring(optionsBuilder.
-                UseSqlServer(@"Data Source=DESKTOP-L9TSC4C\SQLEXPRESS;Initial Catalog=CoffeeLord;Persist Security Info=True;User ID=phatdk;Password=123456"));
+                UseSqlServer(@"Data Source=DESKTOP-AKSDRER\MOMO;Initial Catalog=_Cafe_PH20985;Persist Security Info=True;User ID=sa1;Password=123"));
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

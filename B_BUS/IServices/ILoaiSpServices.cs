@@ -4,9 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using A_DAL.Models;
+using B_BUS.ViewModels;
+
 namespace B_BUS.IServices
 {
-	internal interface ILoaiSpServices
+	public interface ILoaiSpServices
 	{
 		bool AddLoaiSp(LoaiSp obj);
 
@@ -15,6 +17,6 @@ namespace B_BUS.IServices
 		bool UpdateLoaiSp(LoaiSp obj);
 
 		List<LoaiSp> GetAllLoaiSp();
-		LoaiSp GetLoaiSpByid(Guid id);
+		
 	}
 }

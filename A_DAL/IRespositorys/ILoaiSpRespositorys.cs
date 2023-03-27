@@ -7,7 +7,7 @@ using A_DAL.Models;
 
 namespace A_DAL.IRespositorys
 {
-	internal interface ILoaiSpRespositorys
+	public interface ILoaiSpRespositorys
 	{
 		bool AddLoaiSp(LoaiSp obj);
 
