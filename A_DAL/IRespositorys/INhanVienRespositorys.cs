@@ -7,7 +7,7 @@ using A_DAL.Models;
 
 namespace A_DAL.IRespositorys
 {
-	internal interface INhanVienRespositorys
+	public interface INhanVienRespositorys
 	{
 		bool AddNhanVien(NhanVien obj);
 

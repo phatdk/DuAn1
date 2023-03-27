@@ -8,7 +8,7 @@ using A_DAL.IRespositorys;
 
 namespace A_DAL.Respositorys
 {
-	internal class NhanVienRespositorys : INhanVienRespositorys
+	public class NhanVienRespositorys : INhanVienRespositorys
 	{
 		CofffeeDbContext _context;
 		public NhanVienRespositorys()

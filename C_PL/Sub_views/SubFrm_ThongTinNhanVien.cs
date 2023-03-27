@@ -8,13 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace C_PL.Views
+namespace C_PL.Sub_views
 {
-    public partial class Frm_QL_KhuyenMai : Form
+    public partial class SubFrm_ThongTinNhanVien : Form
     {
-        public Frm_QL_KhuyenMai()
+        public SubFrm_ThongTinNhanVien()
         {
             InitializeComponent();
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
