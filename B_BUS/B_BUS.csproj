@@ -10,8 +10,4 @@
     <ProjectReference Include="..\A_DAL\A_DAL.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="ViewModels\" />
-  </ItemGroup>
-
 </Project>

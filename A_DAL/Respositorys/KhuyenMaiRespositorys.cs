@@ -8,7 +8,7 @@ using A_DAL.IRespositorys;
 
 namespace A_DAL.Respositorys
 {
-	internal class KhuyenMaiRespositorys : IKhuyenMaiRespositorys
+	public class KhuyenMaiRespositorys : IKhuyenMaiRespositorys
 	{
 		CofffeeDbContext _context;
         public KhuyenMaiRespositorys()
