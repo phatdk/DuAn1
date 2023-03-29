@@ -8,7 +8,7 @@ using A_DAL.IRespositorys;
 
 namespace A_DAL.Respositorys
 {
-	internal class LoaiSpRespositorys : ILoaiSpRespositorys
+	public class LoaiSpRespositorys : ILoaiSpRespositorys
 	{
 		CofffeeDbContext _context;
 		public LoaiSpRespositorys()
