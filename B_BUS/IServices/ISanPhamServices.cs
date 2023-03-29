@@ -4,9 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using A_DAL.Models;
+using B_BUS.ViewModels;
+
 namespace B_BUS.IServices
 {
-	internal interface ISanPhamServices
+	public interface ISanPhamServices
 	{
 		bool AddSanPham(SanPham obj);
 
@@ -14,6 +16,7 @@ namespace B_BUS.IServices
 
 		bool UpdateSanPham(SanPham obj);
 
+		List<SanPhamVm> GetAllSanPhamVm();
 		List<SanPham> GetAllSanPham();
 		SanPham GetSanPhamByid(Guid id);
 	}

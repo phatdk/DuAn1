@@ -32,19 +32,26 @@
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.dtg_view_khuyenmai = new System.Windows.Forms.DataGridView();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.rd_hethan = new System.Windows.Forms.RadioButton();
+            this.rd_dangdung = new System.Windows.Forms.RadioButton();
+            this.rd_chuadung = new System.Windows.Forms.RadioButton();
+            this.rd_tatca = new System.Windows.Forms.RadioButton();
+            this.txt_timkiem = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.cb_sudung = new System.Windows.Forms.CheckBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.btn_clear = new System.Windows.Forms.Button();
+            this.btn_xoa = new System.Windows.Forms.Button();
+            this.btn_sua = new System.Windows.Forms.Button();
+            this.btn_them = new System.Windows.Forms.Button();
+            this.txt_mota = new System.Windows.Forms.TextBox();
+            this.dtp_ngaykt = new System.Windows.Forms.DateTimePicker();
+            this.dtp_ngaybd = new System.Windows.Forms.DateTimePicker();
+            this.txt_sotien = new System.Windows.Forms.TextBox();
+            this.txt_phantram = new System.Windows.Forms.TextBox();
+            this.txt_dkgiam = new System.Windows.Forms.TextBox();
+            this.txt_tenkm = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -52,11 +59,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.btn_clear = new System.Windows.Forms.Button();
-            this.btn_xoa = new System.Windows.Forms.Button();
-            this.btn_sua = new System.Windows.Forms.Button();
-            this.btn_them = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtg_view_khuyenmai)).BeginInit();
@@ -75,7 +77,7 @@
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(1129, 670);
+            this.groupBox1.Size = new System.Drawing.Size(1340, 920);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Quản lý khuyến mãi";
@@ -88,7 +90,7 @@
             this.groupBox4.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox4.Size = new System.Drawing.Size(685, 530);
+            this.groupBox4.Size = new System.Drawing.Size(896, 780);
             this.groupBox4.TabIndex = 2;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Danh sách khuyến mãi";
@@ -102,93 +104,99 @@
             this.dtg_view_khuyenmai.Name = "dtg_view_khuyenmai";
             this.dtg_view_khuyenmai.RowHeadersWidth = 62;
             this.dtg_view_khuyenmai.RowTemplate.Height = 33;
-            this.dtg_view_khuyenmai.Size = new System.Drawing.Size(681, 502);
+            this.dtg_view_khuyenmai.Size = new System.Drawing.Size(892, 752);
             this.dtg_view_khuyenmai.TabIndex = 0;
+            this.dtg_view_khuyenmai.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtg_view_khuyenmai_CellClick);
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.radioButton4);
-            this.groupBox3.Controls.Add(this.radioButton3);
-            this.groupBox3.Controls.Add(this.radioButton2);
-            this.groupBox3.Controls.Add(this.radioButton1);
-            this.groupBox3.Controls.Add(this.textBox6);
+            this.groupBox3.Controls.Add(this.rd_hethan);
+            this.groupBox3.Controls.Add(this.rd_dangdung);
+            this.groupBox3.Controls.Add(this.rd_chuadung);
+            this.groupBox3.Controls.Add(this.rd_tatca);
+            this.groupBox3.Controls.Add(this.txt_timkiem);
             this.groupBox3.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox3.Location = new System.Drawing.Point(2, 26);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox3.Size = new System.Drawing.Size(685, 112);
+            this.groupBox3.Size = new System.Drawing.Size(896, 112);
             this.groupBox3.TabIndex = 1;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Lọc";
             // 
-            // radioButton4
+            // rd_hethan
             // 
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.Location = new System.Drawing.Point(502, 30);
-            this.radioButton4.Margin = new System.Windows.Forms.Padding(2);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(99, 29);
-            this.radioButton4.TabIndex = 4;
-            this.radioButton4.TabStop = true;
-            this.radioButton4.Text = "Hết hạn";
-            this.radioButton4.UseVisualStyleBackColor = true;
+            this.rd_hethan.AutoSize = true;
+            this.rd_hethan.Location = new System.Drawing.Point(502, 30);
+            this.rd_hethan.Margin = new System.Windows.Forms.Padding(2);
+            this.rd_hethan.Name = "rd_hethan";
+            this.rd_hethan.Size = new System.Drawing.Size(99, 29);
+            this.rd_hethan.TabIndex = 4;
+            this.rd_hethan.Text = "Hết hạn";
+            this.rd_hethan.UseVisualStyleBackColor = true;
+            this.rd_hethan.CheckedChanged += new System.EventHandler(this.rd_hethan_CheckedChanged);
             // 
-            // radioButton3
+            // rd_dangdung
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(299, 30);
-            this.radioButton3.Margin = new System.Windows.Forms.Padding(2);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(197, 29);
-            this.radioButton3.TabIndex = 3;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "Đang được sử dụng";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.rd_dangdung.AutoSize = true;
+            this.rd_dangdung.Location = new System.Drawing.Point(299, 30);
+            this.rd_dangdung.Margin = new System.Windows.Forms.Padding(2);
+            this.rd_dangdung.Name = "rd_dangdung";
+            this.rd_dangdung.Size = new System.Drawing.Size(197, 29);
+            this.rd_dangdung.TabIndex = 3;
+            this.rd_dangdung.Text = "Đang được sử dụng";
+            this.rd_dangdung.UseVisualStyleBackColor = true;
+            this.rd_dangdung.CheckedChanged += new System.EventHandler(this.rd_dangdung_CheckedChanged);
             // 
-            // radioButton2
+            // rd_chuadung
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(98, 30);
-            this.radioButton2.Margin = new System.Windows.Forms.Padding(2);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(195, 29);
-            this.radioButton2.TabIndex = 2;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Chưa được sử dụng";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.rd_chuadung.AutoSize = true;
+            this.rd_chuadung.Location = new System.Drawing.Point(98, 30);
+            this.rd_chuadung.Margin = new System.Windows.Forms.Padding(2);
+            this.rd_chuadung.Name = "rd_chuadung";
+            this.rd_chuadung.Size = new System.Drawing.Size(195, 29);
+            this.rd_chuadung.TabIndex = 2;
+            this.rd_chuadung.Text = "Chưa được sử dụng";
+            this.rd_chuadung.UseVisualStyleBackColor = true;
+            this.rd_chuadung.CheckedChanged += new System.EventHandler(this.rd_chuadung_CheckedChanged);
             // 
-            // radioButton1
+            // rd_tatca
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(9, 30);
-            this.radioButton1.Margin = new System.Windows.Forms.Padding(2);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(83, 29);
-            this.radioButton1.TabIndex = 1;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Tất cả";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.rd_tatca.AutoSize = true;
+            this.rd_tatca.Checked = true;
+            this.rd_tatca.Location = new System.Drawing.Point(9, 30);
+            this.rd_tatca.Margin = new System.Windows.Forms.Padding(2);
+            this.rd_tatca.Name = "rd_tatca";
+            this.rd_tatca.Size = new System.Drawing.Size(83, 29);
+            this.rd_tatca.TabIndex = 1;
+            this.rd_tatca.TabStop = true;
+            this.rd_tatca.Text = "Tất cả";
+            this.rd_tatca.UseVisualStyleBackColor = true;
+            this.rd_tatca.CheckedChanged += new System.EventHandler(this.rd_tatca_CheckedChanged);
             // 
-            // textBox6
+            // txt_timkiem
             // 
-            this.textBox6.Location = new System.Drawing.Point(30, 70);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.PlaceholderText = "Tìm kiếm mã khuyến mãi";
-            this.textBox6.Size = new System.Drawing.Size(358, 31);
-            this.textBox6.TabIndex = 0;
+            this.txt_timkiem.Location = new System.Drawing.Point(30, 70);
+            this.txt_timkiem.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_timkiem.Name = "txt_timkiem";
+            this.txt_timkiem.PlaceholderText = "Tìm kiếm tên khuyến mãi";
+            this.txt_timkiem.Size = new System.Drawing.Size(358, 31);
+            this.txt_timkiem.TabIndex = 0;
+            this.txt_timkiem.TextChanged += new System.EventHandler(this.txt_timkiem_TextChanged);
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.cb_sudung);
+            this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Controls.Add(this.groupBox5);
-            this.groupBox2.Controls.Add(this.textBox5);
-            this.groupBox2.Controls.Add(this.dateTimePicker2);
-            this.groupBox2.Controls.Add(this.dateTimePicker1);
-            this.groupBox2.Controls.Add(this.textBox4);
-            this.groupBox2.Controls.Add(this.textBox3);
-            this.groupBox2.Controls.Add(this.textBox2);
-            this.groupBox2.Controls.Add(this.textBox1);
+            this.groupBox2.Controls.Add(this.txt_mota);
+            this.groupBox2.Controls.Add(this.dtp_ngaykt);
+            this.groupBox2.Controls.Add(this.dtp_ngaybd);
+            this.groupBox2.Controls.Add(this.txt_sotien);
+            this.groupBox2.Controls.Add(this.txt_phantram);
+            this.groupBox2.Controls.Add(this.txt_dkgiam);
+            this.groupBox2.Controls.Add(this.txt_tenkm);
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.label5);
@@ -197,74 +205,155 @@
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.groupBox2.Location = new System.Drawing.Point(687, 26);
+            this.groupBox2.Location = new System.Drawing.Point(898, 26);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox2.Size = new System.Drawing.Size(440, 642);
+            this.groupBox2.Size = new System.Drawing.Size(440, 892);
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông tin";
             // 
-            // textBox5
+            // cb_sudung
             // 
-            this.textBox5.Location = new System.Drawing.Point(21, 402);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(388, 86);
-            this.textBox5.TabIndex = 14;
+            this.cb_sudung.AutoSize = true;
+            this.cb_sudung.Location = new System.Drawing.Point(21, 534);
+            this.cb_sudung.Name = "cb_sudung";
+            this.cb_sudung.Size = new System.Drawing.Size(106, 29);
+            this.cb_sudung.TabIndex = 17;
+            this.cb_sudung.Text = "Sử dụng";
+            this.cb_sudung.UseVisualStyleBackColor = true;
             // 
-            // dateTimePicker2
+            // label8
             // 
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker2.Location = new System.Drawing.Point(229, 329);
-            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(2);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(180, 31);
-            this.dateTimePicker2.TabIndex = 13;
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(21, 506);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(89, 25);
+            this.label8.TabIndex = 16;
+            this.label8.Text = "Trạng thái";
             // 
-            // dateTimePicker1
+            // groupBox5
             // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(21, 329);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(180, 31);
-            this.dateTimePicker1.TabIndex = 12;
+            this.groupBox5.Controls.Add(this.btn_clear);
+            this.groupBox5.Controls.Add(this.btn_xoa);
+            this.groupBox5.Controls.Add(this.btn_sua);
+            this.groupBox5.Controls.Add(this.btn_them);
+            this.groupBox5.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.groupBox5.Location = new System.Drawing.Point(2, 590);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(436, 300);
+            this.groupBox5.TabIndex = 15;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "Thao tác";
             // 
-            // textBox4
+            // btn_clear
             // 
-            this.textBox4.Location = new System.Drawing.Point(229, 258);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(180, 31);
-            this.textBox4.TabIndex = 11;
+            this.btn_clear.Location = new System.Drawing.Point(99, 231);
+            this.btn_clear.Name = "btn_clear";
+            this.btn_clear.Size = new System.Drawing.Size(200, 50);
+            this.btn_clear.TabIndex = 3;
+            this.btn_clear.Text = "Clear";
+            this.btn_clear.UseVisualStyleBackColor = true;
+            this.btn_clear.Click += new System.EventHandler(this.btn_clear_Click);
             // 
-            // textBox3
+            // btn_xoa
             // 
-            this.textBox3.Location = new System.Drawing.Point(21, 258);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(180, 31);
-            this.textBox3.TabIndex = 10;
+            this.btn_xoa.Enabled = false;
+            this.btn_xoa.Location = new System.Drawing.Point(99, 161);
+            this.btn_xoa.Name = "btn_xoa";
+            this.btn_xoa.Size = new System.Drawing.Size(200, 50);
+            this.btn_xoa.TabIndex = 2;
+            this.btn_xoa.Text = "Xóa";
+            this.btn_xoa.UseVisualStyleBackColor = true;
+            this.btn_xoa.Click += new System.EventHandler(this.btn_xoa_Click);
             // 
-            // textBox2
+            // btn_sua
             // 
-            this.textBox2.Location = new System.Drawing.Point(21, 141);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(388, 76);
-            this.textBox2.TabIndex = 9;
+            this.btn_sua.Enabled = false;
+            this.btn_sua.Location = new System.Drawing.Point(99, 95);
+            this.btn_sua.Name = "btn_sua";
+            this.btn_sua.Size = new System.Drawing.Size(200, 50);
+            this.btn_sua.TabIndex = 1;
+            this.btn_sua.Text = "Sửa";
+            this.btn_sua.UseVisualStyleBackColor = true;
+            this.btn_sua.Click += new System.EventHandler(this.btn_sua_Click);
             // 
-            // textBox1
+            // btn_them
             // 
-            this.textBox1.Location = new System.Drawing.Point(21, 70);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(312, 31);
-            this.textBox1.TabIndex = 8;
+            this.btn_them.Location = new System.Drawing.Point(99, 30);
+            this.btn_them.Name = "btn_them";
+            this.btn_them.Size = new System.Drawing.Size(200, 50);
+            this.btn_them.TabIndex = 0;
+            this.btn_them.Text = "Thêm";
+            this.btn_them.UseVisualStyleBackColor = true;
+            this.btn_them.Click += new System.EventHandler(this.btn_them_Click);
+            // 
+            // txt_mota
+            // 
+            this.txt_mota.Location = new System.Drawing.Point(21, 402);
+            this.txt_mota.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_mota.Multiline = true;
+            this.txt_mota.Name = "txt_mota";
+            this.txt_mota.Size = new System.Drawing.Size(388, 86);
+            this.txt_mota.TabIndex = 14;
+            // 
+            // dtp_ngaykt
+            // 
+            this.dtp_ngaykt.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtp_ngaykt.Location = new System.Drawing.Point(229, 329);
+            this.dtp_ngaykt.Margin = new System.Windows.Forms.Padding(2);
+            this.dtp_ngaykt.Name = "dtp_ngaykt";
+            this.dtp_ngaykt.Size = new System.Drawing.Size(180, 31);
+            this.dtp_ngaykt.TabIndex = 13;
+            // 
+            // dtp_ngaybd
+            // 
+            this.dtp_ngaybd.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtp_ngaybd.Location = new System.Drawing.Point(21, 329);
+            this.dtp_ngaybd.Margin = new System.Windows.Forms.Padding(2);
+            this.dtp_ngaybd.Name = "dtp_ngaybd";
+            this.dtp_ngaybd.Size = new System.Drawing.Size(180, 31);
+            this.dtp_ngaybd.TabIndex = 12;
+            // 
+            // txt_sotien
+            // 
+            this.txt_sotien.Location = new System.Drawing.Point(229, 258);
+            this.txt_sotien.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_sotien.Name = "txt_sotien";
+            this.txt_sotien.Size = new System.Drawing.Size(180, 31);
+            this.txt_sotien.TabIndex = 11;
+            this.txt_sotien.Text = "0";
+            this.txt_sotien.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txt_sotien_MouseClick);
+            this.txt_sotien.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_sotien_KeyPress);
+            // 
+            // txt_phantram
+            // 
+            this.txt_phantram.Location = new System.Drawing.Point(21, 258);
+            this.txt_phantram.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_phantram.Name = "txt_phantram";
+            this.txt_phantram.Size = new System.Drawing.Size(180, 31);
+            this.txt_phantram.TabIndex = 10;
+            this.txt_phantram.Text = "0";
+            this.txt_phantram.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txt_phantram_MouseClick);
+            this.txt_phantram.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_phantram_KeyPress);
+            // 
+            // txt_dkgiam
+            // 
+            this.txt_dkgiam.Location = new System.Drawing.Point(21, 141);
+            this.txt_dkgiam.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_dkgiam.Multiline = true;
+            this.txt_dkgiam.Name = "txt_dkgiam";
+            this.txt_dkgiam.Size = new System.Drawing.Size(388, 76);
+            this.txt_dkgiam.TabIndex = 9;
+            // 
+            // txt_tenkm
+            // 
+            this.txt_tenkm.Location = new System.Drawing.Point(21, 70);
+            this.txt_tenkm.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_tenkm.Name = "txt_tenkm";
+            this.txt_tenkm.Size = new System.Drawing.Size(312, 31);
+            this.txt_tenkm.TabIndex = 8;
             // 
             // label7
             // 
@@ -336,61 +425,11 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Tên khuyến mãi";
             // 
-            // groupBox5
-            // 
-            this.groupBox5.Controls.Add(this.btn_clear);
-            this.groupBox5.Controls.Add(this.btn_xoa);
-            this.groupBox5.Controls.Add(this.btn_sua);
-            this.groupBox5.Controls.Add(this.btn_them);
-            this.groupBox5.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.groupBox5.Location = new System.Drawing.Point(2, 340);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(436, 300);
-            this.groupBox5.TabIndex = 15;
-            this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Thao tác";
-            // 
-            // btn_clear
-            // 
-            this.btn_clear.Location = new System.Drawing.Point(99, 231);
-            this.btn_clear.Name = "btn_clear";
-            this.btn_clear.Size = new System.Drawing.Size(200, 50);
-            this.btn_clear.TabIndex = 3;
-            this.btn_clear.Text = "Clear";
-            this.btn_clear.UseVisualStyleBackColor = true;
-            // 
-            // btn_xoa
-            // 
-            this.btn_xoa.Location = new System.Drawing.Point(99, 161);
-            this.btn_xoa.Name = "btn_xoa";
-            this.btn_xoa.Size = new System.Drawing.Size(200, 50);
-            this.btn_xoa.TabIndex = 2;
-            this.btn_xoa.Text = "Xóa";
-            this.btn_xoa.UseVisualStyleBackColor = true;
-            // 
-            // btn_sua
-            // 
-            this.btn_sua.Location = new System.Drawing.Point(99, 95);
-            this.btn_sua.Name = "btn_sua";
-            this.btn_sua.Size = new System.Drawing.Size(200, 50);
-            this.btn_sua.TabIndex = 1;
-            this.btn_sua.Text = "Sửa";
-            this.btn_sua.UseVisualStyleBackColor = true;
-            // 
-            // btn_them
-            // 
-            this.btn_them.Location = new System.Drawing.Point(99, 30);
-            this.btn_them.Name = "btn_them";
-            this.btn_them.Size = new System.Drawing.Size(200, 50);
-            this.btn_them.TabIndex = 0;
-            this.btn_them.Text = "Thêm";
-            this.btn_them.UseVisualStyleBackColor = true;
-            // 
             // Frm_QL_KhuyenMai
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1129, 670);
+            this.ClientSize = new System.Drawing.Size(1340, 920);
             this.Controls.Add(this.groupBox1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Frm_QL_KhuyenMai";
@@ -413,19 +452,19 @@
 		private GroupBox groupBox4;
 		private DataGridView dtg_view_khuyenmai;
 		private GroupBox groupBox3;
-		private RadioButton radioButton4;
-		private RadioButton radioButton3;
-		private RadioButton radioButton2;
-		private RadioButton radioButton1;
-		private TextBox textBox6;
+		private RadioButton rd_hethan;
+		private RadioButton rd_dangdung;
+		private RadioButton rd_chuadung;
+		private RadioButton rd_tatca;
+		private TextBox txt_timkiem;
 		private GroupBox groupBox2;
-		private TextBox textBox5;
-		private DateTimePicker dateTimePicker2;
-		private DateTimePicker dateTimePicker1;
-		private TextBox textBox4;
-		private TextBox textBox3;
-		private TextBox textBox2;
-		private TextBox textBox1;
+		private TextBox txt_mota;
+		private DateTimePicker dtp_ngaykt;
+		private DateTimePicker dtp_ngaybd;
+		private TextBox txt_sotien;
+		private TextBox txt_phantram;
+		private TextBox txt_dkgiam;
+		private TextBox txt_tenkm;
 		private Label label7;
 		private Label label6;
 		private Label label5;
@@ -438,5 +477,7 @@
         private Button btn_xoa;
         private Button btn_sua;
         private Button btn_them;
+        private CheckBox cb_sudung;
+        private Label label8;
     }
 }

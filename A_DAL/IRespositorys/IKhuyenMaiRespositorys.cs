@@ -7,7 +7,7 @@ using A_DAL.Models;
 
 namespace A_DAL.IRespositorys
 {
-	internal interface IKhuyenMaiRespositorys
+	public interface IKhuyenMaiRespositorys
 	{
 		bool AddKhuyenMai(KhuyenMai obj);
 

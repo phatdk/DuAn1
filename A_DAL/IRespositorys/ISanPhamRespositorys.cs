@@ -7,7 +7,7 @@ using A_DAL.Models;
 
 namespace A_DAL.IRespositorys
 {
-	internal interface ISanPhamRespositorys
+	public interface ISanPhamRespositorys
 	{
 		bool AddSanPham(SanPham obj);
 
