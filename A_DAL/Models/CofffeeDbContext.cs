@@ -25,6 +25,7 @@ namespace A_DAL.Models
         {
             base.OnConfiguring(optionsBuilder.
                 UseSqlServer(@"Data Source=DESKTOP-L9TSC4C\SQLEXPRESS;Initial Catalog=CoffeeLord;Persist Security Info=True;User ID=phatdk;Password=123456"));
+
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

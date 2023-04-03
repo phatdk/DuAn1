@@ -50,14 +50,18 @@ namespace C_PL.Views
 					TenLoai = tb_tenloaisp.Text,
 					MoTa = tb_mota.Text,
 				};
-				_ilspService.AddLoaiSp(_loaisp);
-				MessageBox.Show("Thêm thành công");
-				LoadData();
-			}
-			else
-			{
-				MessageBox.Show("Thêm thất bại");
-			}
+				if (_ilspService.AddLoaiSp(_loaisp))
+				{
+                    MessageBox.Show("Thêm thành công");
+                    LoadData();
+                }
+                else
+                {
+                    MessageBox.Show("Thêm thất bại");
+                }
+
+            }
+			
 		}
 
 		private void btn_sua_Click(object sender, EventArgs e)
@@ -69,14 +73,18 @@ namespace C_PL.Views
 				_loaisp.Id = _id;
 				_loaisp.TenLoai = tb_tenloaisp.Text;
 				_loaisp.MoTa = tb_mota.Text;
-				_ilspService.UpdateLoaiSp(_loaisp);
-				MessageBox.Show("Cập nhật thành công");
-				LoadData();
+				if (_ilspService.UpdateLoaiSp(_loaisp))
+				{
+                    MessageBox.Show("Cập nhật thành công");
+                    LoadData();
+                }
+                else
+                {
+                    MessageBox.Show("Cập nhật thất bại");
+                }
+                
 			}
-			else
-			{
-				MessageBox.Show("Cập nhật thất bại");
-			}
+			
 		}
 
 		private void btn_xoa_Click(object sender, EventArgs e)
