@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using A_DAL.Models;
 using A_DAL.IRespositorys;
+using Microsoft.EntityFrameworkCore;
 
 namespace A_DAL.Respositorys
 {
@@ -17,17 +18,11 @@ namespace A_DAL.Respositorys
 		}
 		public bool AddNhanVien(NhanVien obj)
 		{
-			try
-			{
-				_context.nhanViens.Add(obj);
-				_context.SaveChanges();
-				return true;
-			}
-			catch (Exception)
-			{
-				return false;
-			}
-		}
+            if (obj == null) return false;
+            _context.Add(obj);
+            _context.SaveChanges();
+            return true;
+        }
 
 		public bool DeleteNhanVien(Guid id)
 		{
@@ -56,25 +51,10 @@ namespace A_DAL.Respositorys
 
 		public bool UpdateNhanVien(NhanVien obj)
 		{
-			try
-			{
-				var idnv = _context.nhanViens.Find(obj.Id);
-				idnv.MaNv = obj.MaNv;
-				idnv.HoTen = obj.HoTen;
-				idnv.GioiTinh = obj.GioiTinh;
-				idnv.Sdt = obj.Sdt;
-				idnv.ChucVu = obj.ChucVu;
-				idnv.TaiKhoan = obj.TaiKhoan;
-				idnv.MatKhau = obj.MatKhau;
-				idnv.TrangThai = obj.TrangThai;
-				_context.nhanViens.Update(obj);
-				_context.SaveChanges();
-				return true;
-			}
-			catch (Exception)
-			{
-				return false;
-			}
-		}
+            if (obj == null) return false;
+            _context.Update(obj);
+            _context.SaveChanges();
+            return true;
+        }
 	}
 }

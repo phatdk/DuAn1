@@ -10,37 +10,49 @@ using System.Threading.Tasks;
 
 namespace B_BUS.Services
 {
-	public class NhanVienServices : INhanVienServices
-	{
-        INhanVienRespositorys respositorys;
-        public NhanVienServices() 
-        { 
-            respositorys = new NhanVienRespositorys();
+    public class NhanVienServices : INhanVienServices
+    {
+        INhanVienRespositorys _INVrepos;
+        public NhanVienServices()
+        {
+            _INVrepos = new NhanVienRespositorys();
         }
 
-        public bool AddNhanVien(NhanVien obj)
+        public string AddNhanVien(NhanVien obj)
         {
-            throw new NotImplementedException();
+            _INVrepos.AddNhanVien(obj);
+            return "Them thanh cong";
         }
 
-        public bool DeleteNhanVien(Guid id)
+        public string DeleteNhanVien(Guid id)
         {
-            throw new NotImplementedException();
-        }
+            _INVrepos.DeleteNhanVien(id);
+            return "Xoa thanh cong";
+        } 
 
-        public List<NhanVien> GetAllNhanVien()
+            public List<NhanVien> GetAllNhanVien()
         {
-            throw new NotImplementedException();
+            return _INVrepos.GetAllNhanVien().ToList();
         }
 
         public NhanVien GetNhanVienByid(Guid id)
         {
-            throw new NotImplementedException();
+            return _INVrepos.GetNhanVienByid(id);
         }
 
-        public bool UpdateNhanVien(NhanVien obj)
+        public string UpdateNhanVien(NhanVien obj)
         {
-            throw new NotImplementedException();
+            var upd = _INVrepos.GetAllNhanVien().FirstOrDefault(c => c.Id == obj.Id);
+            upd.MaNv = obj.MaNv;
+            upd.HoTen = obj.HoTen;          
+            upd.Sdt = obj.Sdt;
+            upd.TaiKhoan = obj.TaiKhoan;
+            upd.MatKhau = obj.MatKhau;
+            upd.GioiTinh = obj.GioiTinh;
+            upd.ChucVu = obj.ChucVu; 
+            upd.TrangThai = obj.TrangThai;
+            _INVrepos.UpdateNhanVien(upd);
+            return "Sửa thành công";
         }
     }
 }

@@ -8,11 +8,11 @@ namespace B_BUS.IServices
 {
 	public interface INhanVienServices
 	{
-		bool AddNhanVien(NhanVien obj);
+		string AddNhanVien(NhanVien obj);
 
-		bool DeleteNhanVien(Guid id);
+		string DeleteNhanVien(Guid id);
 
-		bool UpdateNhanVien(NhanVien obj);
+		string UpdateNhanVien(NhanVien obj);
 
 		List<NhanVien> GetAllNhanVien();
 		NhanVien GetNhanVienByid(Guid id);
