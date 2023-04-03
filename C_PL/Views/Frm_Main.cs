@@ -38,16 +38,16 @@ namespace C_PL.Views
             MatKhau = matKhau;
             TrangThai = trangThai;
         }
-        //public Frm_Main()
-        //{
-        //    InitializeComponent();
-        //    this.FormBorderStyle = FormBorderStyle.None;
-        //    Frm_BanHang frm = new Frm_BanHang();
-        //    LoadFrm(frm);
-        //    this.TaiKhoan = TaiKhoan;
-        //    this.MatKhau = MatKhau;
-        //    this.ChucVu = ChucVu;
-        //}
+        public Frm_Main()
+        {
+            InitializeComponent();
+            this.FormBorderStyle = FormBorderStyle.None;
+            Frm_BanHang frm = new Frm_BanHang();
+            LoadFrm(frm);
+            this.TaiKhoan = TaiKhoan;
+            this.MatKhau = MatKhau;
+            this.ChucVu = ChucVu;
+        }
         void LoadFrm(Form form)
         {
             if (pn_show.Controls.Count > 0)
