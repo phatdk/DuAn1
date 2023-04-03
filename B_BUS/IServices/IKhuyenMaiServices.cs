@@ -4,9 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using A_DAL.Models;
+using B_BUS.ViewModels;
+
 namespace B_BUS.IServices
 {
-	internal interface IKhuyenMaiServices
+	public interface IKhuyenMaiServices
 	{
 		bool AddKhuyenMai(KhuyenMai obj);
 
@@ -15,6 +17,6 @@ namespace B_BUS.IServices
 		bool UpdateKhuyenMai(KhuyenMai obj);
 
 		List<KhuyenMai> GetAllKhuyenMai();
-		KhuyenMai GetKhuyenMaiByid(Guid id);
+		public KhuyenMai GetKhuyenMaiByid(Guid id);
 	}
 }
