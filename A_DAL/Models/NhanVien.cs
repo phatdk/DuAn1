@@ -12,10 +12,10 @@ namespace A_DAL.Models
         public string MaNv { get; set; }
         public string HoTen { get; set; }
         public int GioiTinh { get; set; }
-        public string Sdt { get; set; }
+        public string? Sdt { get; set; }
         public int ChucVu { get; set; }
-        public string TaiKhoan { get; set; }
-        public string MatKhau { get; set; } 
+        public string? TaiKhoan { get; set; }
+        public string? MatKhau { get; set; } 
         public int TrangThai { get; set; }
         public virtual List<HoaDon> HoaDons { get; set; }
     }

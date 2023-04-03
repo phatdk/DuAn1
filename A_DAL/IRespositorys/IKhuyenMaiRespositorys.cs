@@ -17,5 +17,6 @@ namespace A_DAL.IRespositorys
 
 		List<KhuyenMai> GetAllKhuyenMai();
 		KhuyenMai GetKhuyenMaiByid(Guid id);
+		KhuyenMai GetKhuyenMaiByName(string name);
 	}
 }

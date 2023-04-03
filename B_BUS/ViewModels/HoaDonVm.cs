@@ -4,15 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace A_DAL.Models
+namespace B_BUS.ViewModels
 {
-    public class SP_HD
+    public class HoaDonVm
     {
+
         public Guid? IdHd { get; set; }
         public Guid? IdSp { get; set; }
+        public string TenSp { get; set; }
         public int DonGia { get; set; }
         public int SoLuong { get; set; }
-        public virtual SanPham? SanPham { get; set; }
-        public virtual HoaDon? HoaDon { get; set; }
+        public string? MoTa { get; set; }
     }
 }

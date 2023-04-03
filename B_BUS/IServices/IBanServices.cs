@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using A_DAL.Models;
 namespace B_BUS.IServices
 {
-	internal interface IBanServices
+	public interface IBanServices
 	{
 		bool AddBan(Ban obj);
 

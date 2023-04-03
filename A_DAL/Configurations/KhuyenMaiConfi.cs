@@ -18,7 +18,7 @@ namespace A_DAL.Configurations
             builder.Property(p => p.NgayBd).HasColumnType("datetime");
             builder.Property(p => p.NgayKt).HasColumnType("datetime");
             builder.Property(p => p.MoTa).HasColumnType("Nvarchar(100)");
-            builder.Property(p => p.PhamTramGiam).HasColumnType("decimal(5,2)");
+            builder.Property(p => p.PhamTramGiam).HasColumnType("int");
             builder.Property(p => p.SoTienGiam).HasColumnType("int");
             builder.Property(p => p.DkGiam).HasColumnType("nvarchar(50)");
             builder.Property(p=>p.TrangThai).HasColumnType("int");

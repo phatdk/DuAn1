@@ -21,7 +21,7 @@ namespace C_PL.Views
 
         private void btn_log_Click(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection(@"Data Source=LAPTOP-JRKLACDR\SQLEXPRESS;Initial Catalog=Du_An_1;Integrated Security=True");
+            SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-L9TSC4C\SQLEXPRESS;Initial Catalog=CoffeeLord;Persist Security Info=True;User ID=phatdk;Password=123456");
             SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM nhanViens WHERE TaiKhoan = N'" + txt_TaiKhoan.Text + "' and MatKhau = N'" + txt_MatKhau.Text + "'", con);
             DataTable dt = new DataTable();
             da.Fill(dt);
@@ -31,9 +31,11 @@ namespace C_PL.Views
                 //this.Hide();
                 Frm_Main Main = new Frm_Main(dt.Rows[0][0].ToString(), dt.Rows[0][1].ToString(), dt.Rows[0][2].ToString(), dt.Rows[0][3].ToString(),
                     dt.Rows[0][4].ToString(), dt.Rows[0][5].ToString(), dt.Rows[0][6].ToString(), dt.Rows[0][7].ToString(), dt.Rows[0][8].ToString());
-                Main.Show();
-                Main.FormClosed += MainClosed;
+                //Main.Show();
+                //Main.FormClosed += MainClosed;
                 this.Hide();
+                Main.Closed += (s, args) => this.Close();
+                Main.Show();
             }
             else
             {
@@ -49,11 +51,6 @@ namespace C_PL.Views
         private void MainClosed(object sender, EventArgs e)
         {
             this.Show();
-        }
-
-        private void FrmLogin_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

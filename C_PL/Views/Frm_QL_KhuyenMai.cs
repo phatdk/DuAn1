@@ -94,7 +94,7 @@ namespace C_PL.Views
             km.NgayBd = dtp_ngaybd.Value;
             km.NgayKt = dtp_ngaykt.Value;
             km.MoTa = txt_mota.Text;
-            km.PhamTramGiam = decimal.Parse(txt_phantram.Text);
+            km.PhamTramGiam = int.Parse(txt_phantram.Text);
             km.SoTienGiam = int.Parse(txt_sotien.Text);
             km.TrangThai = cb_sudung.Checked ? 1 : 0;
             if (_khuyenMaiServices.AddKhuyenMai(km))
@@ -116,7 +116,7 @@ namespace C_PL.Views
             km.NgayBd = dtp_ngaybd.Value;
             km.NgayKt = dtp_ngaykt.Value;
             km.MoTa = txt_mota.Text;
-            km.PhamTramGiam = decimal.Parse(txt_phantram.Text);
+            km.PhamTramGiam = int.Parse(txt_phantram.Text);
             km.SoTienGiam = int.Parse(txt_sotien.Text);
             km.TrangThai = cb_sudung.Checked ? 1 : 0;
             if (_khuyenMaiServices.UpdateKhuyenMai(km))

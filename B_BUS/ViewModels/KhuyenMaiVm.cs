@@ -16,7 +16,7 @@ namespace B_BUS.ViewModels
         public string MoTa { get; set; }
         public decimal PhamTramGiam { get; set; }
         public int SoTienGiam { get; set; }
-        public string DkGiam { get; set; }
+        public string? DkGiam { get; set; }
         public int TrangThai { get; set; }
     }
 }

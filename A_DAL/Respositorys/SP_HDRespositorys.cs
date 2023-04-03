@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace A_DAL.Respositorys
 {
-	internal class SP_HDRespositorys : ISP_HDRespositorys
+	public class SP_HDRespositorys : ISP_HDRespositorys
 	{
 		CofffeeDbContext _context;
 		public SP_HDRespositorys()

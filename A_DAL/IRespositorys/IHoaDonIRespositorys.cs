@@ -7,7 +7,7 @@ using A_DAL.Models;
 
 namespace A_DAL.IRespositorys
 {
-	internal interface IHoaDonIRespositorys
+	public interface IHoaDonIRespositorys
 	{
 		bool AddHoaDon(HoaDon obj);
 
@@ -17,5 +17,6 @@ namespace A_DAL.IRespositorys
 
 		List<HoaDon> GetAllHoaDon();
 		HoaDon GetHoaDonByid(Guid id);
+		List<HoaDon> GetHoaDonUnCheck();
 	}
 }

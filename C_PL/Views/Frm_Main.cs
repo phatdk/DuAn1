@@ -22,11 +22,11 @@ namespace C_PL.Views
         DataTable dt;
         SqlCommand cmd;
 
-        public Frm_Main(string id = null, string maNv = null, string hoTen = null, string gioiTinh = null, string sdt = null, string chucVu = null, string taiKhoan = null, string matKhau = null, string trangThai = null)
+        public Frm_Main(string id, string maNv, string hoTen, string gioiTinh, string sdt, string chucVu, string taiKhoan, string matKhau, string trangThai)
         {
             InitializeComponent();
             this.FormBorderStyle = FormBorderStyle.None;
-            Frm_BanHang frm = new Frm_BanHang();
+            Frm_BanHang frm = new Frm_BanHang(Guid.Parse(id));
             LoadFrm(frm);
             Id = id;
             MaNv = maNv;
@@ -44,9 +44,9 @@ namespace C_PL.Views
             this.FormBorderStyle = FormBorderStyle.None;
             Frm_BanHang frm = new Frm_BanHang();
             LoadFrm(frm);
-            this.TaiKhoan = TaiKhoan;
-            this.MatKhau = MatKhau;
-            this.ChucVu = ChucVu;
+            //this.TaiKhoan = TaiKhoan;
+            //this.MatKhau = MatKhau;
+            //this.ChucVu = ChucVu;
         }
         void LoadFrm(Form form)
         {
@@ -60,6 +60,18 @@ namespace C_PL.Views
             form.FormBorderStyle = FormBorderStyle.None;
             form.Show();
         }
+
+        private void hóaĐơnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void danhMụcToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Frm_BanHang frm = new Frm_BanHang();
+            LoadFrm(frm);
+        }
+
         private void btn_close_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -84,7 +96,7 @@ namespace C_PL.Views
         }
         private void aDminToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (ChucVu.Trim() == "0")
+            if (ChucVu.Trim() == "1")
             {
                 Frm_QuanLy frm = new Frm_QuanLy();
                 LoadFrm(frm);
@@ -93,11 +105,6 @@ namespace C_PL.Views
             {
                 MessageBox.Show("Bạn không có quyền truy cập!!!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-        }
-
-        private void Frm_Main_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void nhânViênToolStripMenuItem_Click(object sender, EventArgs e)

@@ -215,6 +215,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "Frm_QuanLy";
             this.Text = "Frm_QuanLy";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);

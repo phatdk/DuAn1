@@ -8,7 +8,7 @@ using A_DAL.IRespositorys;
 
 namespace A_DAL.Respositorys
 {
-	internal class HoaDonIRespositorys : IHoaDonIRespositorys
+	public class HoaDonIRespositorys : IHoaDonIRespositorys
 	{
 		CofffeeDbContext _context;
 		public HoaDonIRespositorys()
@@ -54,7 +54,12 @@ namespace A_DAL.Respositorys
 			return _context.hoaDons.Find(id);
 		}
 
-		public bool UpdateHoaDon(HoaDon obj)
+        public List<HoaDon> GetHoaDonUnCheck()
+        {
+			return _context.hoaDons.Where(p => p.TrangThai == 0).ToList();
+        }
+
+        public bool UpdateHoaDon(HoaDon obj)
 		{
 			try
 			{

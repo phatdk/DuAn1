@@ -14,9 +14,9 @@ namespace A_DAL.Models
         public DateTime NgayBd { get; set; }
         public DateTime NgayKt { get; set; }
         public string MoTa { get; set; }
-        public decimal PhamTramGiam { get; set; }
+        public int PhamTramGiam { get; set; }
         public int SoTienGiam { get; set; }
-        public string DkGiam { get; set; }
+        public string? DkGiam { get; set; }
         public int TrangThai { get; set; }
         public virtual List<HoaDon> HoaDons { get; set; }
     }

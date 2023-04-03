@@ -4,6 +4,7 @@ using A_DAL.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace A_DAL.Migrations
 {
     [DbContext(typeof(CofffeeDbContext))]
-    partial class CofffeeDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230405073412_v0.2")]
+    partial class v02
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -113,8 +115,8 @@ namespace A_DAL.Migrations
                     b.Property<DateTime>("NgayTao")
                         .HasColumnType("datetime");
 
-                    b.Property<int>("PhamTramGiam")
-                        .HasColumnType("int");
+                    b.Property<decimal>("PhamTramGiam")
+                        .HasColumnType("decimal(5,2)");
 
                     b.Property<int>("SoTienGiam")
                         .HasColumnType("int");

@@ -7,7 +7,7 @@ using A_DAL.Models;
 
 namespace A_DAL.IRespositorys
 {
-	internal interface ISP_HDRespositorys
+	public interface ISP_HDRespositorys
 	{
 		bool AddSP_HD(SP_HD obj);
 

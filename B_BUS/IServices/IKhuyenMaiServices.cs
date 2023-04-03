@@ -18,5 +18,6 @@ namespace B_BUS.IServices
 
 		List<KhuyenMai> GetAllKhuyenMai();
 		public KhuyenMai GetKhuyenMaiByid(Guid id);
+		public KhuyenMai GetKhuyenByName(string name);
 	}
 }

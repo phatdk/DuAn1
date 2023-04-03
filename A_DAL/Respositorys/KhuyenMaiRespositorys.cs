@@ -54,7 +54,12 @@ namespace A_DAL.Respositorys
 			return _context.khuyenMais.Find(id);
 		}
 
-		public bool UpdateKhuyenMai(KhuyenMai obj)
+        public KhuyenMai GetKhuyenMaiByName(string name)
+        {
+			return _context.khuyenMais.FirstOrDefault(p => p.Ten.Contains(name));
+        }
+
+        public bool UpdateKhuyenMai(KhuyenMai obj)
 		{
 			try
 			{

@@ -8,7 +8,7 @@ using A_DAL.IRespositorys;
 
 namespace A_DAL.Respositorys
 {
-	internal class Ban_HDIRespositorys : IBan_HDIRespositorys
+	public class Ban_HDIRespositorys : IBan_HDIRespositorys
 	{
 		CofffeeDbContext _context;
         public Ban_HDIRespositorys()
@@ -49,12 +49,17 @@ namespace A_DAL.Respositorys
 			return _context.ban_HDs.ToList();
 		}
 
-		public Ban_HD GetBan_HDByid(Guid id)
+		public List<Ban_HD> GetBan_HDByid(Guid id)
 		{
-			return _context.ban_HDs.Find(id);
+			return _context.ban_HDs.Where(p => p.IdBan == id).ToList(); ;
 		}
 
-		public bool UpdateBan_HD(Ban_HD obj)
+        public Ban_HD GetBan_HDUnCheck(Guid id)
+        {
+			return _context.ban_HDs.FirstOrDefault(p => p.IdBan == id && p.TrangThai == 0);
+        }
+
+        public bool UpdateBan_HD(Ban_HD obj)
 		{
 			try
 			{

@@ -4,17 +4,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using A_DAL.Models;
+using B_BUS.ViewModels;
+
 namespace B_BUS.IServices
 {
-	internal interface IHoaDonServices
+	public interface IHoaDonServices
 	{
-		bool AddHoaDon(HoaDon obj);
+		public bool AddHoaDon(HoaDon? obj);
 
-		bool DeleteHoaDon(Guid id);
+		public bool DeleteHoaDon(Guid id);
 
-		bool UpdateHoaDon(HoaDon obj);
+		public bool UpdateHoaDon(HoaDon obj);
 
-		List<HoaDon> GetAllHoaDon();
-		HoaDon GetHoaDonByid(Guid id);
+		public List<HoaDon> GetAllHoaDon();
+		public HoaDon GetHoaDonByid(Guid id);
+		public List<HoaDon> GetHoaDonUnCheck();
 	}
 }
