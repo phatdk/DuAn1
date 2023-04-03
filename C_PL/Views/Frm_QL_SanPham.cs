@@ -74,9 +74,16 @@ namespace C_PL.Views
 					GiaBan = Convert.ToInt32(tb_giaban.Text),
 					TrangThai = Convert.ToInt32(cbb_trangthai.Text),
 				};
-				_isanPhamSer.AddSanPham(_sanPham);
-				MessageBox.Show("Thêm sản phẩm thành công");
-				LoadSanPham();
+				if (_isanPhamSer.AddSanPham(_sanPham))
+				{
+                    MessageBox.Show("Thêm sản phẩm thành công");
+                    LoadSanPham();
+                }
+				else
+				{
+					MessageBox.Show("Thêm sản phẩm thất bại");
+				}
+				
 			}
 		}
 
@@ -98,14 +105,18 @@ namespace C_PL.Views
 				_sanPham.IdLoai = lsp.Id;
 				_sanPham.GiaBan = Convert.ToInt32(tb_giaban.Text);
 				_sanPham.TrangThai = Convert.ToInt32(cbb_trangthai.Text);
-				_isanPhamSer.UpdateSanPham(_sanPham);
-				MessageBox.Show("Cập nhật sản phẩm thành công");
-				LoadSanPham();
+				if (_isanPhamSer.UpdateSanPham(_sanPham))
+				{
+                    MessageBox.Show("Cập nhật sản phẩm thành công");
+                    LoadSanPham();
+                }
+				else
+				{
+					MessageBox.Show("Cập nhật thất bại");
+				}
+				
 			}
-			else
-			{
-				MessageBox.Show("Cập nhật thất bại");
-			}
+			
 		}
 
 		private void btn_xoa_Click(object sender, EventArgs e)
@@ -114,14 +125,18 @@ namespace C_PL.Views
 			if (result == DialogResult.Yes)
 			{
 				_sanPham.Id = _id;
-				_isanPhamSer.DeleteSanPham(_id);
-				MessageBox.Show("Xoá thành công");
-				LoadSanPham();
-			}
-			else
-			{
-				MessageBox.Show("Xoá thất bại");
-			}
+				if (_isanPhamSer.DeleteSanPham(_id))
+				{
+                    MessageBox.Show("Xoá thành công");
+                    LoadSanPham();
+                }
+                else
+                {
+                    MessageBox.Show("Xoá thất bại");
+                }
+
+            }
+			
 		}
 
 		private void btn_clear_Click(object sender, EventArgs e)
