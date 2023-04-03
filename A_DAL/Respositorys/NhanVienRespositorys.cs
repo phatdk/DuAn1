@@ -59,6 +59,7 @@ namespace A_DAL.Respositorys
 			try
 			{
 				var idnv = _context.nhanViens.Find(obj.Id);
+				idnv.Id = obj.Id;
 				idnv.MaNv = obj.MaNv;
 				idnv.HoTen = obj.HoTen;
 				idnv.GioiTinh = obj.GioiTinh;

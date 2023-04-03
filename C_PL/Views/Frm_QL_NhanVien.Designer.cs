@@ -35,9 +35,9 @@
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.txt_timkiem = new System.Windows.Forms.TextBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.rd_tatca = new System.Windows.Forms.RadioButton();
+            this.rd_khonghoatdong = new System.Windows.Forms.RadioButton();
+            this.rd_hoatdong = new System.Windows.Forms.RadioButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.btn_clear = new System.Windows.Forms.Button();
@@ -111,6 +111,7 @@
             this.dtg_view_nv.RowTemplate.Height = 33;
             this.dtg_view_nv.Size = new System.Drawing.Size(899, 824);
             this.dtg_view_nv.TabIndex = 0;
+            this.dtg_view_nv.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtg_view_nv_CellClick);
             // 
             // panel2
             // 
@@ -144,12 +145,13 @@
             this.txt_timkiem.Name = "txt_timkiem";
             this.txt_timkiem.Size = new System.Drawing.Size(394, 31);
             this.txt_timkiem.TabIndex = 0;
+            this.txt_timkiem.TextChanged += new System.EventHandler(this.txt_timkiem_TextChanged);
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.radioButton1);
-            this.groupBox4.Controls.Add(this.radioButton3);
-            this.groupBox4.Controls.Add(this.radioButton2);
+            this.groupBox4.Controls.Add(this.rd_tatca);
+            this.groupBox4.Controls.Add(this.rd_khonghoatdong);
+            this.groupBox4.Controls.Add(this.rd_hoatdong);
             this.groupBox4.Dock = System.Windows.Forms.DockStyle.Left;
             this.groupBox4.Location = new System.Drawing.Point(0, 0);
             this.groupBox4.Margin = new System.Windows.Forms.Padding(2);
@@ -160,41 +162,41 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Lọc";
             // 
-            // radioButton1
+            // rd_tatca
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(9, 30);
-            this.radioButton1.Margin = new System.Windows.Forms.Padding(2);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(83, 29);
-            this.radioButton1.TabIndex = 0;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Tất cả";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.rd_tatca.AutoSize = true;
+            this.rd_tatca.Location = new System.Drawing.Point(9, 30);
+            this.rd_tatca.Margin = new System.Windows.Forms.Padding(2);
+            this.rd_tatca.Name = "rd_tatca";
+            this.rd_tatca.Size = new System.Drawing.Size(83, 29);
+            this.rd_tatca.TabIndex = 0;
+            this.rd_tatca.TabStop = true;
+            this.rd_tatca.Text = "Tất cả";
+            this.rd_tatca.UseVisualStyleBackColor = true;
             // 
-            // radioButton3
+            // rd_khonghoatdong
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(252, 30);
-            this.radioButton3.Margin = new System.Windows.Forms.Padding(2);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(178, 29);
-            this.radioButton3.TabIndex = 2;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "Không hoạt động";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.rd_khonghoatdong.AutoSize = true;
+            this.rd_khonghoatdong.Location = new System.Drawing.Point(252, 30);
+            this.rd_khonghoatdong.Margin = new System.Windows.Forms.Padding(2);
+            this.rd_khonghoatdong.Name = "rd_khonghoatdong";
+            this.rd_khonghoatdong.Size = new System.Drawing.Size(178, 29);
+            this.rd_khonghoatdong.TabIndex = 2;
+            this.rd_khonghoatdong.TabStop = true;
+            this.rd_khonghoatdong.Text = "Không hoạt động";
+            this.rd_khonghoatdong.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // rd_hoatdong
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(112, 30);
-            this.radioButton2.Margin = new System.Windows.Forms.Padding(2);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(124, 29);
-            this.radioButton2.TabIndex = 1;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Hoạt động";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.rd_hoatdong.AutoSize = true;
+            this.rd_hoatdong.Location = new System.Drawing.Point(112, 30);
+            this.rd_hoatdong.Margin = new System.Windows.Forms.Padding(2);
+            this.rd_hoatdong.Name = "rd_hoatdong";
+            this.rd_hoatdong.Size = new System.Drawing.Size(124, 29);
+            this.rd_hoatdong.TabIndex = 1;
+            this.rd_hoatdong.TabStop = true;
+            this.rd_hoatdong.Text = "Hoạt động";
+            this.rd_hoatdong.UseVisualStyleBackColor = true;
             // 
             // panel1
             // 
@@ -214,54 +216,58 @@
             this.groupBox3.Controls.Add(this.btn_sua);
             this.groupBox3.Controls.Add(this.btn_them);
             this.groupBox3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.groupBox3.Location = new System.Drawing.Point(0, 548);
+            this.groupBox3.Location = new System.Drawing.Point(0, 626);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox3.Size = new System.Drawing.Size(441, 375);
+            this.groupBox3.Size = new System.Drawing.Size(441, 297);
             this.groupBox3.TabIndex = 5;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Thao tác";
             // 
             // btn_clear
             // 
-            this.btn_clear.Location = new System.Drawing.Point(124, 289);
+            this.btn_clear.Location = new System.Drawing.Point(124, 263);
             this.btn_clear.Margin = new System.Windows.Forms.Padding(2);
             this.btn_clear.Name = "btn_clear";
-            this.btn_clear.Size = new System.Drawing.Size(250, 62);
+            this.btn_clear.Size = new System.Drawing.Size(182, 56);
             this.btn_clear.TabIndex = 3;
             this.btn_clear.Text = "Clear";
             this.btn_clear.UseVisualStyleBackColor = true;
+            this.btn_clear.Click += new System.EventHandler(this.btn_clear_Click);
             // 
             // btn_xoa
             // 
-            this.btn_xoa.Location = new System.Drawing.Point(124, 201);
+            this.btn_xoa.Location = new System.Drawing.Point(124, 189);
             this.btn_xoa.Margin = new System.Windows.Forms.Padding(2);
             this.btn_xoa.Name = "btn_xoa";
-            this.btn_xoa.Size = new System.Drawing.Size(250, 62);
+            this.btn_xoa.Size = new System.Drawing.Size(182, 55);
             this.btn_xoa.TabIndex = 2;
             this.btn_xoa.Text = "Xóa";
             this.btn_xoa.UseVisualStyleBackColor = true;
+            this.btn_xoa.Click += new System.EventHandler(this.btn_xoa_Click);
             // 
             // btn_sua
             // 
-            this.btn_sua.Location = new System.Drawing.Point(124, 119);
+            this.btn_sua.Location = new System.Drawing.Point(124, 118);
             this.btn_sua.Margin = new System.Windows.Forms.Padding(2);
             this.btn_sua.Name = "btn_sua";
-            this.btn_sua.Size = new System.Drawing.Size(250, 62);
+            this.btn_sua.Size = new System.Drawing.Size(182, 55);
             this.btn_sua.TabIndex = 1;
             this.btn_sua.Text = "Sửa";
             this.btn_sua.UseVisualStyleBackColor = true;
+            this.btn_sua.Click += new System.EventHandler(this.btn_sua_Click);
             // 
             // btn_them
             // 
-            this.btn_them.Location = new System.Drawing.Point(124, 38);
+            this.btn_them.Location = new System.Drawing.Point(124, 47);
             this.btn_them.Margin = new System.Windows.Forms.Padding(2);
             this.btn_them.Name = "btn_them";
-            this.btn_them.Size = new System.Drawing.Size(250, 62);
+            this.btn_them.Size = new System.Drawing.Size(182, 53);
             this.btn_them.TabIndex = 0;
             this.btn_them.Text = "Thêm";
             this.btn_them.UseVisualStyleBackColor = true;
+            this.btn_them.Click += new System.EventHandler(this.btn_them_Click);
             // 
             // groupBox2
             // 
@@ -497,9 +503,9 @@
         private GroupBox groupBox5;
         private TextBox txt_timkiem;
         private GroupBox groupBox4;
-        private RadioButton radioButton1;
-        private RadioButton radioButton3;
-        private RadioButton radioButton2;
+        private RadioButton rd_tatca;
+        private RadioButton rd_khonghoatdong;
+        private RadioButton rd_hoatdong;
         private GroupBox groupBox6;
         private DataGridView dtg_view_nv;
         private GroupBox groupBox3;

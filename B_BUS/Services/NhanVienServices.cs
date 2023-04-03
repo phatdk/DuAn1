@@ -20,27 +20,27 @@ namespace B_BUS.Services
 
         public bool AddNhanVien(NhanVien obj)
         {
-            throw new NotImplementedException();
+            return respositorys.AddNhanVien(obj);
         }
 
         public bool DeleteNhanVien(Guid id)
         {
-            throw new NotImplementedException();
+            return respositorys.DeleteNhanVien(id);
         }
 
         public List<NhanVien> GetAllNhanVien()
         {
-            throw new NotImplementedException();
+            return respositorys.GetAllNhanVien();
         }
 
         public NhanVien GetNhanVienByid(Guid id)
         {
-            throw new NotImplementedException();
+            return respositorys.GetNhanVienByid(id);
         }
 
         public bool UpdateNhanVien(NhanVien obj)
         {
-            throw new NotImplementedException();
+            return respositorys.UpdateNhanVien(obj);
         }
     }
 }
