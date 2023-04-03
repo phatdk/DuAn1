@@ -8,7 +8,7 @@ using A_DAL.IRespositorys;
 
 namespace A_DAL.Respositorys
 {
-	internal class BanRespositorys : IBanRespositorys
+	public class BanRespositorys : IBanRespositorys
 	{
 		CofffeeDbContext _context;
 

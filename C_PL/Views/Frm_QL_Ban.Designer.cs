@@ -28,201 +28,224 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.dtg_view_ban = new System.Windows.Forms.DataGridView();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.btn_clear = new System.Windows.Forms.Button();
-            this.btn_xoa = new System.Windows.Forms.Button();
-            this.btn_sua = new System.Windows.Forms.Button();
-            this.btn_them = new System.Windows.Forms.Button();
-            this.cb_trangthai = new System.Windows.Forms.ComboBox();
-            this.txt_tenban = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.groupBox1.SuspendLayout();
-            this.groupBox4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtg_view_ban)).BeginInit();
-            this.groupBox3.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            this.groupBox5.SuspendLayout();
-            this.SuspendLayout();
+            groupBox1 = new GroupBox();
+            groupBox4 = new GroupBox();
+            dtg_view_ban = new DataGridView();
+            groupBox3 = new GroupBox();
+            textBox1 = new TextBox();
+            groupBox2 = new GroupBox();
+            groupBox5 = new GroupBox();
+            btn_clear = new Button();
+            btn_xoa = new Button();
+            btn_sua = new Button();
+            btn_them = new Button();
+            cb_trangthai = new ComboBox();
+            txt_tenban = new TextBox();
+            label2 = new Label();
+            label1 = new Label();
+            groupBox1.SuspendLayout();
+            groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dtg_view_ban).BeginInit();
+            groupBox3.SuspendLayout();
+            groupBox2.SuspendLayout();
+            groupBox5.SuspendLayout();
+            SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.groupBox4);
-            this.groupBox1.Controls.Add(this.groupBox3);
-            this.groupBox1.Controls.Add(this.groupBox2);
-            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox1.Location = new System.Drawing.Point(0, 0);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1142, 664);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Quản lý bàn";
+            groupBox1.Controls.Add(groupBox4);
+            groupBox1.Controls.Add(groupBox3);
+            groupBox1.Controls.Add(groupBox2);
+            groupBox1.Dock = DockStyle.Fill;
+            groupBox1.Location = new Point(0, 0);
+            groupBox1.Margin = new Padding(2);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Padding = new Padding(2);
+            groupBox1.Size = new Size(914, 531);
+            groupBox1.TabIndex = 0;
+            groupBox1.TabStop = false;
+            groupBox1.Text = "Quản lý bàn";
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.dtg_view_ban);
-            this.groupBox4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox4.Location = new System.Drawing.Point(3, 92);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(696, 569);
-            this.groupBox4.TabIndex = 2;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Danh sách bàn";
+            groupBox4.Controls.Add(dtg_view_ban);
+            groupBox4.Dock = DockStyle.Fill;
+            groupBox4.Location = new Point(2, 74);
+            groupBox4.Margin = new Padding(2);
+            groupBox4.Name = "groupBox4";
+            groupBox4.Padding = new Padding(2);
+            groupBox4.Size = new Size(558, 455);
+            groupBox4.TabIndex = 2;
+            groupBox4.TabStop = false;
+            groupBox4.Text = "Danh sách bàn";
             // 
             // dtg_view_ban
             // 
-            this.dtg_view_ban.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtg_view_ban.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dtg_view_ban.Location = new System.Drawing.Point(3, 27);
-            this.dtg_view_ban.Name = "dtg_view_ban";
-            this.dtg_view_ban.RowHeadersWidth = 62;
-            this.dtg_view_ban.RowTemplate.Height = 33;
-            this.dtg_view_ban.Size = new System.Drawing.Size(690, 539);
-            this.dtg_view_ban.TabIndex = 0;
+            dtg_view_ban.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dtg_view_ban.Dock = DockStyle.Fill;
+            dtg_view_ban.Location = new Point(2, 22);
+            dtg_view_ban.Margin = new Padding(2);
+            dtg_view_ban.Name = "dtg_view_ban";
+            dtg_view_ban.RowHeadersWidth = 62;
+            dtg_view_ban.RowTemplate.Height = 33;
+            dtg_view_ban.Size = new Size(554, 431);
+            dtg_view_ban.TabIndex = 0;
+            dtg_view_ban.CellClick += dtg_view_ban_CellClick;
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.textBox1);
-            this.groupBox3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupBox3.Location = new System.Drawing.Point(3, 27);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(696, 65);
-            this.groupBox3.TabIndex = 1;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Tìm kiếm";
+            groupBox3.Controls.Add(textBox1);
+            groupBox3.Dock = DockStyle.Top;
+            groupBox3.Location = new Point(2, 22);
+            groupBox3.Margin = new Padding(2);
+            groupBox3.Name = "groupBox3";
+            groupBox3.Padding = new Padding(2);
+            groupBox3.Size = new Size(558, 52);
+            groupBox3.TabIndex = 1;
+            groupBox3.TabStop = false;
+            groupBox3.Text = "Tìm kiếm";
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(19, 28);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(431, 31);
-            this.textBox1.TabIndex = 0;
+            textBox1.Location = new Point(15, 22);
+            textBox1.Margin = new Padding(2);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(346, 27);
+            textBox1.TabIndex = 0;
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.groupBox5);
-            this.groupBox2.Controls.Add(this.cb_trangthai);
-            this.groupBox2.Controls.Add(this.txt_tenban);
-            this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Controls.Add(this.label1);
-            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.groupBox2.Location = new System.Drawing.Point(699, 27);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(440, 634);
-            this.groupBox2.TabIndex = 0;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Thông tin";
+            groupBox2.Controls.Add(groupBox5);
+            groupBox2.Controls.Add(cb_trangthai);
+            groupBox2.Controls.Add(txt_tenban);
+            groupBox2.Controls.Add(label2);
+            groupBox2.Controls.Add(label1);
+            groupBox2.Dock = DockStyle.Right;
+            groupBox2.Location = new Point(560, 22);
+            groupBox2.Margin = new Padding(2);
+            groupBox2.Name = "groupBox2";
+            groupBox2.Padding = new Padding(2);
+            groupBox2.Size = new Size(352, 507);
+            groupBox2.TabIndex = 0;
+            groupBox2.TabStop = false;
+            groupBox2.Text = "Thông tin";
             // 
             // groupBox5
             // 
-            this.groupBox5.Controls.Add(this.btn_clear);
-            this.groupBox5.Controls.Add(this.btn_xoa);
-            this.groupBox5.Controls.Add(this.btn_sua);
-            this.groupBox5.Controls.Add(this.btn_them);
-            this.groupBox5.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.groupBox5.Location = new System.Drawing.Point(3, 331);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(434, 300);
-            this.groupBox5.TabIndex = 4;
-            this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Thao tác";
+            groupBox5.Controls.Add(btn_clear);
+            groupBox5.Controls.Add(btn_xoa);
+            groupBox5.Controls.Add(btn_sua);
+            groupBox5.Controls.Add(btn_them);
+            groupBox5.Dock = DockStyle.Bottom;
+            groupBox5.Location = new Point(2, 265);
+            groupBox5.Margin = new Padding(2);
+            groupBox5.Name = "groupBox5";
+            groupBox5.Padding = new Padding(2);
+            groupBox5.Size = new Size(348, 240);
+            groupBox5.TabIndex = 4;
+            groupBox5.TabStop = false;
+            groupBox5.Text = "Thao tác";
             // 
             // btn_clear
             // 
-            this.btn_clear.Location = new System.Drawing.Point(99, 231);
-            this.btn_clear.Name = "btn_clear";
-            this.btn_clear.Size = new System.Drawing.Size(200, 50);
-            this.btn_clear.TabIndex = 3;
-            this.btn_clear.Text = "Clear";
-            this.btn_clear.UseVisualStyleBackColor = true;
+            btn_clear.Location = new Point(79, 185);
+            btn_clear.Margin = new Padding(2);
+            btn_clear.Name = "btn_clear";
+            btn_clear.Size = new Size(160, 40);
+            btn_clear.TabIndex = 3;
+            btn_clear.Text = "Clear";
+            btn_clear.UseVisualStyleBackColor = true;
+            btn_clear.Click += btn_clear_Click;
             // 
             // btn_xoa
             // 
-            this.btn_xoa.Location = new System.Drawing.Point(99, 161);
-            this.btn_xoa.Name = "btn_xoa";
-            this.btn_xoa.Size = new System.Drawing.Size(200, 50);
-            this.btn_xoa.TabIndex = 2;
-            this.btn_xoa.Text = "Xóa";
-            this.btn_xoa.UseVisualStyleBackColor = true;
+            btn_xoa.Location = new Point(79, 129);
+            btn_xoa.Margin = new Padding(2);
+            btn_xoa.Name = "btn_xoa";
+            btn_xoa.Size = new Size(160, 40);
+            btn_xoa.TabIndex = 2;
+            btn_xoa.Text = "Xóa";
+            btn_xoa.UseVisualStyleBackColor = true;
+            btn_xoa.Click += btn_xoa_Click;
             // 
             // btn_sua
             // 
-            this.btn_sua.Location = new System.Drawing.Point(99, 95);
-            this.btn_sua.Name = "btn_sua";
-            this.btn_sua.Size = new System.Drawing.Size(200, 50);
-            this.btn_sua.TabIndex = 1;
-            this.btn_sua.Text = "Sửa";
-            this.btn_sua.UseVisualStyleBackColor = true;
+            btn_sua.Location = new Point(79, 76);
+            btn_sua.Margin = new Padding(2);
+            btn_sua.Name = "btn_sua";
+            btn_sua.Size = new Size(160, 40);
+            btn_sua.TabIndex = 1;
+            btn_sua.Text = "Sửa";
+            btn_sua.UseVisualStyleBackColor = true;
+            btn_sua.Click += btn_sua_Click;
             // 
             // btn_them
             // 
-            this.btn_them.Location = new System.Drawing.Point(99, 30);
-            this.btn_them.Name = "btn_them";
-            this.btn_them.Size = new System.Drawing.Size(200, 50);
-            this.btn_them.TabIndex = 0;
-            this.btn_them.Text = "Thêm";
-            this.btn_them.UseVisualStyleBackColor = true;
+            btn_them.Location = new Point(79, 24);
+            btn_them.Margin = new Padding(2);
+            btn_them.Name = "btn_them";
+            btn_them.Size = new Size(160, 40);
+            btn_them.TabIndex = 0;
+            btn_them.Text = "Thêm";
+            btn_them.UseVisualStyleBackColor = true;
+            btn_them.Click += btn_them_Click;
             // 
             // cb_trangthai
             // 
-            this.cb_trangthai.FormattingEnabled = true;
-            this.cb_trangthai.Items.AddRange(new object[] {
-            "Hoạt động",
-            "Không hoạt động"});
-            this.cb_trangthai.Location = new System.Drawing.Point(26, 243);
-            this.cb_trangthai.Name = "cb_trangthai";
-            this.cb_trangthai.Size = new System.Drawing.Size(388, 33);
-            this.cb_trangthai.TabIndex = 3;
+            cb_trangthai.FormattingEnabled = true;
+            cb_trangthai.Items.AddRange(new object[] { "1", "2" });
+            cb_trangthai.Location = new Point(21, 194);
+            cb_trangthai.Margin = new Padding(2);
+            cb_trangthai.Name = "cb_trangthai";
+            cb_trangthai.Size = new Size(311, 28);
+            cb_trangthai.TabIndex = 3;
             // 
             // txt_tenban
             // 
-            this.txt_tenban.Location = new System.Drawing.Point(26, 160);
-            this.txt_tenban.Name = "txt_tenban";
-            this.txt_tenban.Size = new System.Drawing.Size(388, 31);
-            this.txt_tenban.TabIndex = 2;
+            txt_tenban.Location = new Point(21, 128);
+            txt_tenban.Margin = new Padding(2);
+            txt_tenban.Name = "txt_tenban";
+            txt_tenban.Size = new Size(311, 27);
+            txt_tenban.TabIndex = 2;
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(26, 215);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(89, 25);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Trạng thái";
+            label2.AutoSize = true;
+            label2.Location = new Point(21, 172);
+            label2.Margin = new Padding(2, 0, 2, 0);
+            label2.Name = "label2";
+            label2.Size = new Size(75, 20);
+            label2.TabIndex = 1;
+            label2.Text = "Trạng thái";
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(26, 132);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(73, 25);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Tên bàn";
+            label1.AutoSize = true;
+            label1.Location = new Point(21, 106);
+            label1.Margin = new Padding(2, 0, 2, 0);
+            label1.Name = "label1";
+            label1.Size = new Size(61, 20);
+            label1.TabIndex = 0;
+            label1.Text = "Tên bàn";
             // 
             // Frm_QL_Ban
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1142, 664);
-            this.Controls.Add(this.groupBox1);
-            this.Name = "Frm_QL_Ban";
-            this.Text = "Frm_QL_Ban";
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dtg_view_ban)).EndInit();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            this.groupBox5.ResumeLayout(false);
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(914, 531);
+            Controls.Add(groupBox1);
+            Margin = new Padding(2);
+            Name = "Frm_QL_Ban";
+            Text = "Frm_QL_Ban";
+            groupBox1.ResumeLayout(false);
+            groupBox4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dtg_view_ban).EndInit();
+            groupBox3.ResumeLayout(false);
+            groupBox3.PerformLayout();
+            groupBox2.ResumeLayout(false);
+            groupBox2.PerformLayout();
+            groupBox5.ResumeLayout(false);
+            ResumeLayout(false);
         }
 
         #endregion
