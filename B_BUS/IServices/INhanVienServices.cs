@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using A_DAL.Models;
 namespace B_BUS.IServices
 {
-	internal interface INhanVienServices
+	public interface INhanVienServices
 	{
 		bool AddNhanVien(NhanVien obj);
 

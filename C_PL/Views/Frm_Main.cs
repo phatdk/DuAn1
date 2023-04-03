@@ -1,4 +1,6 @@
-﻿using System;
+﻿using C_PL.Sub_views;
+using Microsoft.Data.SqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,13 +14,40 @@ namespace C_PL.Views
 {
     public partial class Frm_Main : Form
     {
-        public Frm_Main()
+        string Id;
+        string MaNv = "", HoTen = "", GioiTinh = "", Sdt = "", ChucVu = "", TaiKhoan = "", MatKhau = "", TrangThai = "";
+        string ketnoi = @"Data Source=LAPTOP-JRKLACDR\SQLEXPRESS;Initial Catalog=Du_An_1;Integrated Security=True";
+        SqlConnection con;
+        SqlDataAdapter da;
+        DataTable dt;
+        SqlCommand cmd;
+
+        public Frm_Main(string id = null, string maNv = null, string hoTen = null, string gioiTinh = null, string sdt = null, string chucVu = null, string taiKhoan = null, string matKhau = null, string trangThai = null)
         {
             InitializeComponent();
             this.FormBorderStyle = FormBorderStyle.None;
             Frm_BanHang frm = new Frm_BanHang();
             LoadFrm(frm);
+            Id = id;
+            MaNv = maNv;
+            HoTen = hoTen;
+            GioiTinh = gioiTinh;
+            Sdt = sdt;
+            ChucVu = chucVu;
+            TaiKhoan = taiKhoan;
+            MatKhau = matKhau;
+            TrangThai = trangThai;
         }
+        //public Frm_Main()
+        //{
+        //    InitializeComponent();
+        //    this.FormBorderStyle = FormBorderStyle.None;
+        //    Frm_BanHang frm = new Frm_BanHang();
+        //    LoadFrm(frm);
+        //    this.TaiKhoan = TaiKhoan;
+        //    this.MatKhau = MatKhau;
+        //    this.ChucVu = ChucVu;
+        //}
         void LoadFrm(Form form)
         {
             if (pn_show.Controls.Count > 0)
@@ -46,7 +75,6 @@ namespace C_PL.Views
             Frm_BanHang frm = new Frm_BanHang();
             LoadFrm(frm);
         }
-
         private void đăngXuấtToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -54,11 +82,28 @@ namespace C_PL.Views
             frm.Closed += (s, args) => this.Close();
             frm.Show();
         }
-
         private void aDminToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Frm_QuanLy frm = new Frm_QuanLy();
-            LoadFrm(frm);
+            if (ChucVu.Trim() == "0")
+            {
+                Frm_QuanLy frm = new Frm_QuanLy();
+                LoadFrm(frm);
+            }
+            else
+            {
+                MessageBox.Show("Bạn không có quyền truy cập!!!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void Frm_Main_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void nhânViênToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SubFrm_ThongTinNhanVien tt = new SubFrm_ThongTinNhanVien();
+            tt.Show();
         }
     }
 }
