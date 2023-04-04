@@ -148,5 +148,10 @@ namespace C_PL.Views
 
             dtg_view_nv.DataSource = (from x in LstNhanVien where x.MaNv.Contains(txt_timkiem.Text) select x).ToList();  
         }
+
+        private void Frm_QL_NhanVien_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

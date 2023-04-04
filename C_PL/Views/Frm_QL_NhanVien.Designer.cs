@@ -454,6 +454,7 @@
             Margin = new Padding(2);
             Name = "Frm_QL_NhanVien";
             Text = "Frm_QL_NhanVien";
+            Load += Frm_QL_NhanVien_Load;
             groupBox1.ResumeLayout(false);
             groupBox6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dtg_view_nv).EndInit();
