@@ -51,7 +51,7 @@ namespace A_DAL.Respositorys
 
 		public List<Ban_HD> GetBan_HDByid(Guid id)
 		{
-			return _context.ban_HDs.Where(p => p.IdBan == id).ToList(); ;
+			return _context.ban_HDs.Where(p => p.IdHd == id).ToList(); ;
 		}
 
         public Ban_HD GetBan_HDUnCheck(Guid id)

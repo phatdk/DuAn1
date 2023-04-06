@@ -37,6 +37,8 @@ namespace C_PL.Views
             TaiKhoan = taiKhoan;
             MatKhau = matKhau;
             TrangThai = trangThai;
+            lb_nhanvien.Text = "Chức vụ : " + (int.Parse(chucVu) == 1 ? "Admin" : "Nhân viên bán hàng");
+            lb_chucvu.Text = "Xin chào : " + hoTen;
         }
         public Frm_Main()
         {
@@ -66,17 +68,22 @@ namespace C_PL.Views
 
         }
 
+        private void thoátToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
         private void danhMụcToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Frm_BanHang frm = new Frm_BanHang();
             LoadFrm(frm);
         }
-
+        // mất sự kiện
         private void btn_close_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-
+        // mất sự kiện
         private void btn_hide_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;

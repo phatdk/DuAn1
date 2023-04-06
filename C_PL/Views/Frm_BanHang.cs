@@ -106,6 +106,7 @@ namespace C_PL.Views
             //cb_khuyenmai.Text = _idKm == Guid.Empty ? "" : _khuyenMaiServices.GetKhuyenMaiByid(_idKm).Ten;
             lb_tongtien.Text = tongtien.ToString();
             lb_tongtienconlai.Text = tongtien.ToString();
+            txt_tientra.Text = "0";
             if (!txt_tientra.Text.Contains(""))
             {
                 lb_tienthua.Text = (int.Parse(txt_tientra.Text) - int.Parse(lb_tongtienconlai.Text)).ToString();
@@ -252,7 +253,7 @@ namespace C_PL.Views
                         LoadView(hd);
                     }
                 }
-                else if (input.Equals("") || input.Equals("0"))
+                else if (input.Equals("0"))
                 {
                     if (hoaDonVm != null)
                     {
@@ -285,12 +286,10 @@ namespace C_PL.Views
             _checkOut = true;
             if (_idHd == Guid.Empty)
             {
-                Guid test = _khuyenMaiServices.GetKhuyenByName(cb_khuyenmai.Text).Id;
-                var km = _khuyenMaiServices.GetAllKhuyenMai().Where(p => p.Ten.Equals(cb_khuyenmai.Text));
                 var hoaDon = new HoaDon();
                 hoaDon.Id = Guid.NewGuid();
                 hoaDon.IdNv = _idNv;
-                hoaDon.IdKm = cb_khuyenmai.Text.Equals("") ? null : test;
+                hoaDon.IdKm = cb_khuyenmai.SelectedIndex == 0 ? null : _khuyenMaiServices.GetKhuyenByName(cb_khuyenmai.Text).Id;
                 hoaDon.NgayTao = DateTime.Now;
                 hoaDon.TrangThai = 0;
                 if (_hoaDonServices.AddHoaDon(hoaDon))
@@ -362,10 +361,50 @@ namespace C_PL.Views
         {
             LuuHoaDon();
         }
-
+        public void ThanhToan()
+        {
+            if (int.Parse(lb_tienthua.Text) >= 0)
+            {
+                if (_checkOut == true)
+                {
+                    HoaDon hdthanhtoan = _hoaDonServices.GetHoaDonByid(_idHd);
+                    var hoaDon = new HoaDon();
+                    hoaDon.Id = hdthanhtoan.Id;
+                    hoaDon.IdNv = hdthanhtoan.IdNv;
+                    hoaDon.IdKm = cb_khuyenmai.SelectedIndex == 0 ? null : _khuyenMaiServices.GetKhuyenByName(cb_khuyenmai.Text).Id;
+                    hoaDon.NgayTao = hdthanhtoan.NgayTao;
+                    hoaDon.NgayThanhToan = DateTime.Now;
+                    hoaDon.TongTien = int.Parse(lb_tongtienconlai.Text);
+                    hoaDon.TrangThai = 1;
+                    if (_hoaDonServices.UpdateHoaDon(hoaDon))
+                    {
+                        if (_idBan != Guid.Empty)
+                        {
+                            foreach (var item in _ban_HDServices.GetBan_HDByid(_idHd))
+                            {
+                                Ban_HD ban_HD = new Ban_HD(); // luu ban_hd
+                                ban_HD.IdBan = _idBan;
+                                ban_HD.IdHd = _idHd;
+                                ban_HD.TrangThai = 1;
+                                _ban_HDServices.UpdateBan_HD(ban_HD);
+                            }
+                            Ban ban = new Ban();// doi trang thai ban
+                            ban.Id = _idBan;
+                            ban.TenBan = _banServices.GetBanByid(_idBan).TenBan;
+                            ban.TrangThai = 1;
+                            _banServices.UpdateBan(ban);
+                            List<Ban> SortList = _banServices.GetAllBan().OrderBy(p => p.TenBan).ToList();
+                            LoadBan(SortList);
+                        }
+                    }
+                }
+                MessageBox.Show("Thanh toán thành công");
+            }
+            else MessageBox.Show("Số tiền thành toán chưa đủ");
+        }
         private void btn_thanhtoan_Click(object sender, EventArgs e)
         {
-            LuuHoaDon();
+            ThanhToan();
         }
 
         private void cb_loaisp_SelectedIndexChanged(object sender, EventArgs e)
@@ -403,7 +442,14 @@ namespace C_PL.Views
 
         private void txt_tientra_TextChanged(object sender, EventArgs e)
         {
-            lb_tienthua.Text = (int.Parse(txt_tientra.Text) - int.Parse(lb_tongtienconlai.Text)).ToString();
+            if (!(txt_tientra.Text == ""))
+            {
+                lb_tienthua.Text = (int.Parse(txt_tientra.Text) - int.Parse(lb_tongtienconlai.Text)).ToString();
+            }
+            else
+            {
+                lb_tienthua.Text = (0 - int.Parse(lb_tongtienconlai.Text)).ToString();
+            }
         }
 
         private void txt_tientra_KeyPress(object sender, KeyPressEventArgs e)
@@ -462,7 +508,7 @@ namespace C_PL.Views
                         LoadView(hd);
                     }
                 }
-                else if (input.Equals("") || input.Equals("0"))
+                else if (input.Equals("0"))
                 {
                     if (hoaDonVm != null)
                     {

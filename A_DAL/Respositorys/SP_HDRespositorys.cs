@@ -59,10 +59,13 @@ namespace A_DAL.Respositorys
 		{
 			try
 			{
-				var sp_hd = _context.sP_HDs.FirstOrDefault(p => p.IdHd == obj.IdHd && p.IdSp == obj.IdSp);
+				var sp_hd = _context.sP_HDs.Find(obj.IdHd, obj.IdSp);
+				_context.Remove(sp_hd);
+				sp_hd.IdHd = obj.IdHd;
+				sp_hd.IdSp = obj.IdSp;
 				sp_hd.DonGia = obj.DonGia;
 				sp_hd.SoLuong = obj.SoLuong;
-				_context.sP_HDs.Update(obj);
+				_context.sP_HDs.Add(obj);
 				_context.SaveChanges();
 				return true;
 			}
