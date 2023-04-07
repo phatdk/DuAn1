@@ -87,6 +87,7 @@
             this.dtg_view_loaisp.RowTemplate.Height = 33;
             this.dtg_view_loaisp.Size = new System.Drawing.Size(631, 520);
             this.dtg_view_loaisp.TabIndex = 0;
+            this.dtg_view_loaisp.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtg_view_loaisp_CellClick);
             // 
             // groupBox3
             // 
@@ -108,6 +109,7 @@
             this.txt_timkiem.Name = "txt_timkiem";
             this.txt_timkiem.Size = new System.Drawing.Size(432, 31);
             this.txt_timkiem.TabIndex = 0;
+            this.txt_timkiem.TextChanged += new System.EventHandler(this.txt_timkiem_TextChanged);
             // 
             // groupBox2
             // 
@@ -157,8 +159,9 @@
             this.btn_clear.Name = "btn_clear";
             this.btn_clear.Size = new System.Drawing.Size(200, 50);
             this.btn_clear.TabIndex = 3;
-            this.btn_clear.Text = "Clear";
+            this.btn_clear.Text = "Làm mới";
             this.btn_clear.UseVisualStyleBackColor = true;
+            this.btn_clear.Click += new System.EventHandler(this.btn_clear_Click);
             // 
             // btn_xoa
             // 
@@ -169,6 +172,7 @@
             this.btn_xoa.TabIndex = 2;
             this.btn_xoa.Text = "Xóa";
             this.btn_xoa.UseVisualStyleBackColor = true;
+            this.btn_xoa.Click += new System.EventHandler(this.btn_xoa_Click);
             // 
             // btn_sua
             // 
@@ -179,6 +183,7 @@
             this.btn_sua.TabIndex = 1;
             this.btn_sua.Text = "Sửa";
             this.btn_sua.UseVisualStyleBackColor = true;
+            this.btn_sua.Click += new System.EventHandler(this.btn_sua_Click);
             // 
             // btn_them
             // 
@@ -189,6 +194,7 @@
             this.btn_them.TabIndex = 0;
             this.btn_them.Text = "Thêm";
             this.btn_them.UseVisualStyleBackColor = true;
+            this.btn_them.Click += new System.EventHandler(this.btn_them_Click);
             // 
             // tb_tenloaisp
             // 

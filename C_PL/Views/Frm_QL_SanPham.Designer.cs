@@ -95,6 +95,7 @@
             this.dtg_view_sanpham.RowTemplate.Height = 33;
             this.dtg_view_sanpham.Size = new System.Drawing.Size(515, 750);
             this.dtg_view_sanpham.TabIndex = 0;
+            this.dtg_view_sanpham.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtg_view_sanpham_CellClick);
             // 
             // groupBox3
             // 
@@ -116,6 +117,7 @@
             this.tb_timkiem.Name = "tb_timkiem";
             this.tb_timkiem.Size = new System.Drawing.Size(428, 31);
             this.tb_timkiem.TabIndex = 0;
+            this.tb_timkiem.TextChanged += new System.EventHandler(this.tb_timkiem_TextChanged);
             // 
             // groupBox2
             // 
@@ -164,8 +166,9 @@
             this.btn_clear.Name = "btn_clear";
             this.btn_clear.Size = new System.Drawing.Size(200, 50);
             this.btn_clear.TabIndex = 3;
-            this.btn_clear.Text = "Clear";
+            this.btn_clear.Text = "Làm mới";
             this.btn_clear.UseVisualStyleBackColor = true;
+            this.btn_clear.Click += new System.EventHandler(this.btn_clear_Click);
             // 
             // btn_xoa
             // 
@@ -176,6 +179,7 @@
             this.btn_xoa.TabIndex = 2;
             this.btn_xoa.Text = "Xóa";
             this.btn_xoa.UseVisualStyleBackColor = true;
+            this.btn_xoa.Click += new System.EventHandler(this.btn_xoa_Click);
             // 
             // btn_sua
             // 
@@ -186,6 +190,7 @@
             this.btn_sua.TabIndex = 1;
             this.btn_sua.Text = "Sửa";
             this.btn_sua.UseVisualStyleBackColor = true;
+            this.btn_sua.Click += new System.EventHandler(this.btn_sua_Click);
             // 
             // btn_them
             // 
@@ -196,6 +201,7 @@
             this.btn_them.TabIndex = 0;
             this.btn_them.Text = "Thêm";
             this.btn_them.UseVisualStyleBackColor = true;
+            this.btn_them.Click += new System.EventHandler(this.btn_them_Click);
             // 
             // tb_mota
             // 
@@ -226,6 +232,7 @@
             this.pic_anh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic_anh.TabIndex = 13;
             this.pic_anh.TabStop = false;
+            this.pic_anh.Click += new System.EventHandler(this.pic_anh_Click);
             // 
             // cbb_trangthai
             // 

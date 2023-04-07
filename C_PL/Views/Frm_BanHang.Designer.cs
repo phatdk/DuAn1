@@ -320,6 +320,7 @@
             // 
             // dtg_view_hd
             // 
+            this.dtg_view_hd.BackgroundColor = System.Drawing.Color.White;
             this.dtg_view_hd.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtg_view_hd.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dtg_view_hd.Location = new System.Drawing.Point(2, 26);
