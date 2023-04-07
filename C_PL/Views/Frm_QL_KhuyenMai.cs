@@ -221,12 +221,12 @@ namespace C_PL.Views
 
         private void txt_phantram_MouseClick(object sender, MouseEventArgs e)
         {
-            txt_phantram.Text = ".00";
+            txt_phantram.Text = "0";
         }
 
         private void txt_sotien_MouseClick(object sender, MouseEventArgs e)
         {
-            txt_sotien.Text = "";
+            txt_sotien.Text = "0";
         }
     }
 }

@@ -74,6 +74,7 @@
             // 
             // dtg_view_hoadon
             // 
+            this.dtg_view_hoadon.BackgroundColor = System.Drawing.Color.White;
             this.dtg_view_hoadon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtg_view_hoadon.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dtg_view_hoadon.Location = new System.Drawing.Point(3, 27);
@@ -96,6 +97,7 @@
             // 
             // dtg_view_chitiethoadon
             // 
+            this.dtg_view_chitiethoadon.BackgroundColor = System.Drawing.Color.White;
             this.dtg_view_chitiethoadon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtg_view_chitiethoadon.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dtg_view_chitiethoadon.Location = new System.Drawing.Point(3, 27);

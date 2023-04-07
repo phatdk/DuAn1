@@ -438,6 +438,10 @@ namespace C_PL.Views
                     lb_tongtienconlai.Text = (tong / 100 * (100 - km.PhamTramGiam)).ToString();
                 }
             }
+            else
+            {
+                lb_tongtienconlai.Text = lb_tongtien.Text;
+            }
         }
 
         private void txt_tientra_TextChanged(object sender, EventArgs e)

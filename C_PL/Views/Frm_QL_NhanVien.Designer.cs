@@ -102,6 +102,7 @@
             // 
             // dtg_view_nv
             // 
+            this.dtg_view_nv.BackgroundColor = System.Drawing.Color.White;
             this.dtg_view_nv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtg_view_nv.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dtg_view_nv.Location = new System.Drawing.Point(2, 26);
@@ -216,11 +217,11 @@
             this.groupBox3.Controls.Add(this.btn_sua);
             this.groupBox3.Controls.Add(this.btn_them);
             this.groupBox3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.groupBox3.Location = new System.Drawing.Point(0, 626);
+            this.groupBox3.Location = new System.Drawing.Point(0, 592);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox3.Size = new System.Drawing.Size(441, 297);
+            this.groupBox3.Size = new System.Drawing.Size(441, 331);
             this.groupBox3.TabIndex = 5;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Thao tác";

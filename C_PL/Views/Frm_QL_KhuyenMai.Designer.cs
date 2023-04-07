@@ -97,6 +97,7 @@
             // 
             // dtg_view_khuyenmai
             // 
+            this.dtg_view_khuyenmai.BackgroundColor = System.Drawing.Color.White;
             this.dtg_view_khuyenmai.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtg_view_khuyenmai.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dtg_view_khuyenmai.Location = new System.Drawing.Point(2, 26);
@@ -340,7 +341,7 @@
             // 
             // txt_dkgiam
             // 
-            this.txt_dkgiam.Location = new System.Drawing.Point(21, 141);
+            this.txt_dkgiam.Location = new System.Drawing.Point(21, 138);
             this.txt_dkgiam.Margin = new System.Windows.Forms.Padding(2);
             this.txt_dkgiam.Multiline = true;
             this.txt_dkgiam.Name = "txt_dkgiam";
@@ -357,63 +358,63 @@
             // 
             // label7
             // 
-            label7.AutoSize = true;
-            label7.Location = new Point(17, 300);
-            label7.Margin = new Padding(2, 0, 2, 0);
-            label7.Name = "label7";
-            label7.Size = new Size(48, 20);
-            label7.TabIndex = 6;
-            label7.Text = "Mô tả";
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(17, 375);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(59, 25);
+            this.label7.TabIndex = 6;
+            this.label7.Text = "Mô tả";
             // 
             // label6
             // 
-            label6.AutoSize = true;
-            label6.Location = new Point(177, 241);
-            label6.Margin = new Padding(2, 0, 2, 0);
-            label6.Name = "label6";
-            label6.Size = new Size(100, 20);
-            label6.TabIndex = 5;
-            label6.Text = "Ngày kết thúc";
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(229, 302);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(122, 25);
+            this.label6.TabIndex = 5;
+            this.label6.Text = "Ngày kết thúc";
             // 
             // label5
             // 
-            label5.AutoSize = true;
-            label5.Location = new Point(17, 241);
-            label5.Margin = new Padding(2, 0, 2, 0);
-            label5.Name = "label5";
-            label5.Size = new Size(99, 20);
-            label5.TabIndex = 4;
-            label5.Text = "Ngày bắt đầu";
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(17, 302);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(120, 25);
+            this.label5.TabIndex = 4;
+            this.label5.Text = "Ngày bắt đầu";
             // 
             // label4
             // 
-            label4.AutoSize = true;
-            label4.Location = new Point(177, 183);
-            label4.Margin = new Padding(2, 0, 2, 0);
-            label4.Name = "label4";
-            label4.Size = new Size(93, 20);
-            label4.TabIndex = 3;
-            label4.Text = "Số tiền giảm";
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(221, 231);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(112, 25);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Số tiền giảm";
             // 
             // label3
             // 
-            label3.AutoSize = true;
-            label3.Location = new Point(17, 183);
-            label3.Margin = new Padding(2, 0, 2, 0);
-            label3.Name = "label3";
-            label3.Size = new Size(114, 20);
-            label3.TabIndex = 2;
-            label3.Text = "Phần trăm giảm";
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(17, 231);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(138, 25);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Phần trăm giảm";
             // 
             // label2
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(17, 90);
-            label2.Margin = new Padding(2, 0, 2, 0);
-            label2.Name = "label2";
-            label2.Size = new Size(109, 20);
-            label2.TabIndex = 1;
-            label2.Text = "Điều kiện giảm";
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(17, 112);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(130, 25);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Điều kiện giảm";
             // 
             // label1
             // 
@@ -443,6 +444,7 @@
             this.groupBox2.PerformLayout();
             this.groupBox5.ResumeLayout(false);
             this.ResumeLayout(false);
+
         }
 
         #endregion
