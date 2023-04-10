@@ -16,7 +16,7 @@ namespace C_PL.Views
     {
         string Id;
         string MaNv = "", HoTen = "", GioiTinh = "", Sdt = "", ChucVu = "", TaiKhoan = "", MatKhau = "", TrangThai = "";
-        string ketnoi = @"Data Source=LAPTOP-JRKLACDR\SQLEXPRESS;Initial Catalog=Du_An_1;Integrated Security=True";
+        string ketnoi = @"Data Source=DESKTOP-AKSDRER\MOMO;Initial Catalog=Cafe1234;Persist Security Info=True;User ID=sa1;Password=123";
         SqlConnection con;
         SqlDataAdapter da;
         DataTable dt;

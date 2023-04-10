@@ -21,7 +21,7 @@ namespace C_PL.Views
 
         private void btn_log_Click(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-L9TSC4C\SQLEXPRESS;Initial Catalog=CoffeeLord;Persist Security Info=True;User ID=phatdk;Password=123456");
+            SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-AKSDRER\MOMO;Initial Catalog=Cafe1234;Persist Security Info=True;User ID=sa1;Password=123");
             SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM nhanViens WHERE TaiKhoan = N'" + txt_TaiKhoan.Text + "' and MatKhau = N'" + txt_MatKhau.Text + "'", con);
             DataTable dt = new DataTable();
             da.Fill(dt);

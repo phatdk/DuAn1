@@ -221,9 +221,9 @@ namespace C_PL.Views
         {
             //Sub_views.SubFrm_AddSanPham addsp = new Sub_views.SubFrm_AddSanPham((SanPham)((PictureBox)sender).Tag, hd);
             //addsp.Show();
-            _checkOut = false;
             if (_idBan != Guid.Empty)
             {
+                _checkOut = false;
                 SanPham sp = (SanPham)((PictureBox)sender).Tag;
                 string input = Interaction.InputBox("Số lượng sản phẩm", sp.TenSp, "1", 500, 300);
                 HoaDonVm hoaDonVm = hd.FirstOrDefault(p => p.IdSp == sp.Id);
