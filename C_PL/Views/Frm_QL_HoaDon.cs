@@ -18,6 +18,7 @@ namespace C_PL.Views
         private ISanPhamServices _ISanPham;
         private ISP_HDServices _SpHD;
         Guid _Id;
+        
         public Frm_QL_HoaDon()
         {
             InitializeComponent();
@@ -25,6 +26,7 @@ namespace C_PL.Views
             _ISanPham = new SanPhamServices();
             _SpHD = new SP_HDServices();
             LoadHoaDon();
+            
         }
         public void LoadHoaDon()
         {

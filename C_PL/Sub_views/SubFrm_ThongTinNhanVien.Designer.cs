@@ -37,6 +37,14 @@
             label7 = new Label();
             label8 = new Label();
             label9 = new Label();
+            lbMaNV = new Label();
+            lbTenNV = new Label();
+            lbGioiTinh = new Label();
+            lbSdt = new Label();
+            lbChucVu = new Label();
+            lbTaiKhoan = new Label();
+            lbMatKhau = new Label();
+            lbTrangThai = new Label();
             SuspendLayout();
             // 
             // label3
@@ -124,12 +132,93 @@
             label9.TabIndex = 13;
             label9.Text = "Trạng thái :";
             // 
+            // lbMaNV
+            // 
+            lbMaNV.AutoSize = true;
+            lbMaNV.Location = new Point(153, 155);
+            lbMaNV.Name = "lbMaNV";
+            lbMaNV.Size = new Size(58, 20);
+            lbMaNV.TabIndex = 14;
+            lbMaNV.Text = "label10";
+            // 
+            // lbTenNV
+            // 
+            lbTenNV.AutoSize = true;
+            lbTenNV.Location = new Point(153, 213);
+            lbTenNV.Name = "lbTenNV";
+            lbTenNV.Size = new Size(58, 20);
+            lbTenNV.TabIndex = 15;
+            lbTenNV.Text = "label10";
+            // 
+            // lbGioiTinh
+            // 
+            lbGioiTinh.AutoSize = true;
+            lbGioiTinh.Location = new Point(153, 266);
+            lbGioiTinh.Name = "lbGioiTinh";
+            lbGioiTinh.Size = new Size(58, 20);
+            lbGioiTinh.TabIndex = 16;
+            lbGioiTinh.Text = "label10";
+            // 
+            // lbSdt
+            // 
+            lbSdt.AutoSize = true;
+            lbSdt.Location = new Point(153, 324);
+            lbSdt.Name = "lbSdt";
+            lbSdt.Size = new Size(58, 20);
+            lbSdt.TabIndex = 17;
+            lbSdt.Text = "label10";
+            // 
+            // lbChucVu
+            // 
+            lbChucVu.AutoSize = true;
+            lbChucVu.Location = new Point(422, 155);
+            lbChucVu.Name = "lbChucVu";
+            lbChucVu.Size = new Size(58, 20);
+            lbChucVu.TabIndex = 18;
+            lbChucVu.Text = "label10";
+            // 
+            // lbTaiKhoan
+            // 
+            lbTaiKhoan.AutoSize = true;
+            lbTaiKhoan.Location = new Point(422, 213);
+            lbTaiKhoan.Name = "lbTaiKhoan";
+            lbTaiKhoan.Size = new Size(58, 20);
+            lbTaiKhoan.TabIndex = 19;
+            lbTaiKhoan.Text = "label10";
+            // 
+            // lbMatKhau
+            // 
+            lbMatKhau.AutoSize = true;
+            lbMatKhau.Location = new Point(422, 266);
+            lbMatKhau.Name = "lbMatKhau";
+            lbMatKhau.Size = new Size(58, 20);
+            lbMatKhau.TabIndex = 20;
+            lbMatKhau.Text = "label10";
+           
+            // 
+            // lbTrangThai
+            // 
+            lbTrangThai.AutoSize = true;
+            lbTrangThai.Location = new Point(422, 324);
+            lbTrangThai.Name = "lbTrangThai";
+            lbTrangThai.Size = new Size(58, 20);
+            lbTrangThai.TabIndex = 21;
+            lbTrangThai.Text = "label10";
+            // 
             // SubFrm_ThongTinNhanVien
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(255, 192, 128);
             ClientSize = new Size(571, 475);
+            Controls.Add(lbTrangThai);
+            Controls.Add(lbMatKhau);
+            Controls.Add(lbTaiKhoan);
+            Controls.Add(lbChucVu);
+            Controls.Add(lbSdt);
+            Controls.Add(lbGioiTinh);
+            Controls.Add(lbTenNV);
+            Controls.Add(lbMaNV);
             Controls.Add(label9);
             Controls.Add(label8);
             Controls.Add(label7);
@@ -157,5 +246,13 @@
         private Label label7;
         private Label label8;
         private Label label9;
+        private Label lbMaNV;
+        private Label lbTenNV;
+        private Label lbGioiTinh;
+        private Label lbSdt;
+        private Label lbChucVu;
+        private Label lbTaiKhoan;
+        private Label lbMatKhau;
+        private Label lbTrangThai;
     }
 }

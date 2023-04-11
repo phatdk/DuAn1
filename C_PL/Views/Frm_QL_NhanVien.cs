@@ -10,11 +10,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
 
 namespace C_PL.Views
 {
     public partial class Frm_QL_NhanVien : Form
     {
+        List<NhanVien> NhanVienList;
         INhanVienServices _nhanVienServices;
         Guid _id;
         public Frm_QL_NhanVien()
@@ -70,7 +72,7 @@ namespace C_PL.Views
         }
         public List<NhanVien> FindKey()
         {
-            return _nhanVienServices.GetAllNhanVien().Where(p => p.HoTen.ToLower().Contains(txt_timkiem.Text.ToLower()) 
+            return _nhanVienServices.GetAllNhanVien().Where(p => p.HoTen.ToLower().Contains(txt_timkiem.Text.ToLower())
             || p.MaNv.ToLower().Contains(txt_timkiem.Text.ToLower())).ToList();
         }
 
@@ -152,7 +154,21 @@ namespace C_PL.Views
 
         private void txt_timkiem_TextChanged(object sender, EventArgs e)
         {
-            LoadView(FindKey());
+            FindKey();
+        }
+        
+        private void radioButton3_CheckedChanged(object sender, EventArgs e)
+        {
+            
+        }
+        private void groupBox5_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rd_tatca_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

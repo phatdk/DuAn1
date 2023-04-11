@@ -14,9 +14,9 @@ namespace C_PL.Views
 {
     public partial class Frm_Main : Form
     {
-        string Id;
-        string MaNv = "", HoTen = "", GioiTinh = "", Sdt = "", ChucVu = "", TaiKhoan = "", MatKhau = "", TrangThai = "";
-        string ketnoi = @"Data Source=DESKTOP-AKSDRER\MOMO;Initial Catalog=Cafe1234;Persist Security Info=True;User ID=sa1;Password=123";
+        public string Id;
+        public string MaNv = "", HoTen = "", GioiTinh = "", Sdt = "", ChucVu = "", TaiKhoan = "", MatKhau = "", TrangThai = "";
+        public string ketnoi = @"Data Source=LAPTOP-JRKLACDR\SQLEXPRESS;Initial Catalog=Du_An_1;Integrated Security=True";
         SqlConnection con;
         SqlDataAdapter da;
         DataTable dt;
@@ -46,9 +46,9 @@ namespace C_PL.Views
             this.FormBorderStyle = FormBorderStyle.None;
             Frm_BanHang frm = new Frm_BanHang();
             LoadFrm(frm);
-            //this.TaiKhoan = TaiKhoan;
-            //this.MatKhau = MatKhau;
-            //this.ChucVu = ChucVu;
+            //this.taikhoan = taikhoan;
+            //this.matkhau = matkhau;
+            //this.chucvu = chucvu;
         }
         void LoadFrm(Form form)
         {
@@ -116,7 +116,7 @@ namespace C_PL.Views
 
         private void nhânViênToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            SubFrm_ThongTinNhanVien tt = new SubFrm_ThongTinNhanVien();
+            SubFrm_ThongTinNhanVien tt = new SubFrm_ThongTinNhanVien(Id, MaNv, HoTen, GioiTinh, Sdt, ChucVu, TaiKhoan, MatKhau, TrangThai);
             tt.Show();
         }
     }
