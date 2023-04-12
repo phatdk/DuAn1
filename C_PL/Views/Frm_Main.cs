@@ -65,7 +65,8 @@ namespace C_PL.Views
 
         private void hóaĐơnToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            Frm_KhuyenMai frm = new Frm_KhuyenMai();
+            frm.Show();
         }
 
         private void thoátToolStripMenuItem_Click(object sender, EventArgs e)

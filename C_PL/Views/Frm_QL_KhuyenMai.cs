@@ -47,11 +47,11 @@ namespace C_PL.Views
             List<KhuyenMai> newlist = new List<KhuyenMai>();
             if (rd_chuadung.Checked)
             {
-                newlist = list.Where(p => p.TrangThai == 0).ToList();
+                newlist = list.Where(p => p.TrangThai == 0 && p.NgayKt >= DateTime.Now).ToList();
             }
             else if (rd_dangdung.Checked)
             {
-                newlist = list.Where(p => p.TrangThai == 1).ToList();
+                newlist = list.Where(p => p.TrangThai == 1 && p.NgayKt >= DateTime.Now).ToList();
             }
             else if (rd_hethan.Checked)
             {
