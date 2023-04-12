@@ -68,5 +68,12 @@ namespace C_PL.Views
                 LoadHoaDonCT(Guid.Parse(r.Cells[0].Value.ToString()));
             }
         }
+
+        private void btn_inhd_Click(object sender, EventArgs e)
+        {
+            var hd = _IHoaDon.GetHoaDonByid(_Id).Id;
+            Frm_ThongTinHD fm = new Frm_ThongTinHD(hd);
+            fm.ShowDialog();
+        }
     }
 }

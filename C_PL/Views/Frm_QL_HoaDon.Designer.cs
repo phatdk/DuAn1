@@ -55,9 +55,9 @@
             groupBox1.Controls.Add(groupBox3);
             groupBox1.Dock = DockStyle.Fill;
             groupBox1.Location = new Point(0, 0);
-            groupBox1.Margin = new Padding(2, 2, 2, 2);
+            groupBox1.Margin = new Padding(2);
             groupBox1.Name = "groupBox1";
-            groupBox1.Padding = new Padding(2, 2, 2, 2);
+            groupBox1.Padding = new Padding(2);
             groupBox1.Size = new Size(1018, 618);
             groupBox1.TabIndex = 0;
             groupBox1.TabStop = false;
@@ -68,9 +68,9 @@
             groupBox4.Controls.Add(dtg_view_hoadon);
             groupBox4.Dock = DockStyle.Fill;
             groupBox4.Location = new Point(2, 84);
-            groupBox4.Margin = new Padding(2, 2, 2, 2);
+            groupBox4.Margin = new Padding(2);
             groupBox4.Name = "groupBox4";
-            groupBox4.Padding = new Padding(2, 2, 2, 2);
+            groupBox4.Padding = new Padding(2);
             groupBox4.Size = new Size(854, 210);
             groupBox4.TabIndex = 4;
             groupBox4.TabStop = false;
@@ -82,7 +82,7 @@
             dtg_view_hoadon.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dtg_view_hoadon.Dock = DockStyle.Fill;
             dtg_view_hoadon.Location = new Point(2, 22);
-            dtg_view_hoadon.Margin = new Padding(2, 2, 2, 2);
+            dtg_view_hoadon.Margin = new Padding(2);
             dtg_view_hoadon.Name = "dtg_view_hoadon";
             dtg_view_hoadon.RowHeadersWidth = 62;
             dtg_view_hoadon.RowTemplate.Height = 33;
@@ -95,9 +95,9 @@
             groupBox2.Controls.Add(dtg_view_chitiethoadon);
             groupBox2.Dock = DockStyle.Bottom;
             groupBox2.Location = new Point(2, 294);
-            groupBox2.Margin = new Padding(2, 2, 2, 2);
+            groupBox2.Margin = new Padding(2);
             groupBox2.Name = "groupBox2";
-            groupBox2.Padding = new Padding(2, 2, 2, 2);
+            groupBox2.Padding = new Padding(2);
             groupBox2.Size = new Size(854, 322);
             groupBox2.TabIndex = 3;
             groupBox2.TabStop = false;
@@ -109,7 +109,7 @@
             dtg_view_chitiethoadon.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dtg_view_chitiethoadon.Dock = DockStyle.Fill;
             dtg_view_chitiethoadon.Location = new Point(2, 22);
-            dtg_view_chitiethoadon.Margin = new Padding(2, 2, 2, 2);
+            dtg_view_chitiethoadon.Margin = new Padding(2);
             dtg_view_chitiethoadon.Name = "dtg_view_chitiethoadon";
             dtg_view_chitiethoadon.RowHeadersWidth = 62;
             dtg_view_chitiethoadon.RowTemplate.Height = 33;
@@ -121,7 +121,7 @@
             panel1.Controls.Add(btn_inhd);
             panel1.Dock = DockStyle.Right;
             panel1.Location = new Point(856, 84);
-            panel1.Margin = new Padding(2, 2, 2, 2);
+            panel1.Margin = new Padding(2);
             panel1.Name = "panel1";
             panel1.Size = new Size(160, 532);
             panel1.TabIndex = 2;
@@ -129,12 +129,13 @@
             // btn_inhd
             // 
             btn_inhd.Location = new Point(22, 202);
-            btn_inhd.Margin = new Padding(2, 2, 2, 2);
+            btn_inhd.Margin = new Padding(2);
             btn_inhd.Name = "btn_inhd";
             btn_inhd.Size = new Size(114, 46);
             btn_inhd.TabIndex = 0;
             btn_inhd.Text = "In hóa đơn";
             btn_inhd.UseVisualStyleBackColor = true;
+            btn_inhd.Click += btn_inhd_Click;
             // 
             // groupBox3
             // 
@@ -142,9 +143,9 @@
             groupBox3.Controls.Add(txt_timkiem);
             groupBox3.Dock = DockStyle.Top;
             groupBox3.Location = new Point(2, 22);
-            groupBox3.Margin = new Padding(2, 2, 2, 2);
+            groupBox3.Margin = new Padding(2);
             groupBox3.Name = "groupBox3";
-            groupBox3.Padding = new Padding(2, 2, 2, 2);
+            groupBox3.Padding = new Padding(2);
             groupBox3.Size = new Size(1014, 62);
             groupBox3.TabIndex = 1;
             groupBox3.TabStop = false;
@@ -154,7 +155,7 @@
             // 
             dateTimePicker1.Format = DateTimePickerFormat.Short;
             dateTimePicker1.Location = new Point(297, 24);
-            dateTimePicker1.Margin = new Padding(2, 2, 2, 2);
+            dateTimePicker1.Margin = new Padding(2);
             dateTimePicker1.Name = "dateTimePicker1";
             dateTimePicker1.Size = new Size(158, 27);
             dateTimePicker1.TabIndex = 1;
@@ -163,7 +164,7 @@
             // txt_timkiem
             // 
             txt_timkiem.Location = new Point(22, 24);
-            txt_timkiem.Margin = new Padding(2, 2, 2, 2);
+            txt_timkiem.Margin = new Padding(2);
             txt_timkiem.Name = "txt_timkiem";
             txt_timkiem.PlaceholderText = "Tìm kiếm mã nv, mã hóa đơn,...";
             txt_timkiem.Size = new Size(262, 27);
@@ -175,7 +176,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1018, 618);
             Controls.Add(groupBox1);
-            Margin = new Padding(2, 2, 2, 2);
+            Margin = new Padding(2);
             Name = "Frm_QL_HoaDon";
             Text = "Frm_QL_HoaDon";
             groupBox1.ResumeLayout(false);
