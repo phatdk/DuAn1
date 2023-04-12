@@ -63,6 +63,16 @@ namespace C_PL.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ca_phe_rang {
+            get {
+                object obj = ResourceManager.GetObject("ca-phe-rang", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Co_be_mua_dong__7_1536x864__2_ {
             get {
                 object obj = ResourceManager.GetObject("Co-be-mua-dong_-7-1536x864 (2)", resourceCulture);

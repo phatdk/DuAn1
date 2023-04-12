@@ -19,6 +19,7 @@ namespace A_DAL.Configurations
             builder.Property(p => p.MaNv).HasColumnType("varchar(13)");
             builder.Property(p => p.GioiTinh).HasColumnType("int");
             builder.Property(p => p.Sdt).HasColumnType("varchar(13)");
+            builder.Property(p => p.Email).HasColumnType("nvarchar(50)");
             builder.Property(p => p.ChucVu).HasColumnType("int");
             builder.Property(p => p.TrangThai).HasColumnType("int");
         }

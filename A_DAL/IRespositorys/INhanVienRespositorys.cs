@@ -16,6 +16,6 @@ namespace A_DAL.IRespositorys
 		bool UpdateNhanVien(NhanVien obj);
 
 		List<NhanVien> GetAllNhanVien();
-		NhanVien GetNhanVienByid(Guid id);
+		NhanVien GetNhanVien(string email);
 	}
 }

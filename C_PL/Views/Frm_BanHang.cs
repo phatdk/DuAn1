@@ -70,7 +70,7 @@ namespace C_PL.Views
             _hoaDonServices = new HoaDonServices();
             InitializeComponent();
             #region loadview
-            dtg_view_hd.ColumnCount = 8;
+            dtg_view_hd.ColumnCount = 7;
             dtg_view_hd.Columns[0].Name = "Idsp";
             dtg_view_hd.Columns[0].Visible = false;
             dtg_view_hd.Columns[1].Name = "STT";
@@ -79,7 +79,6 @@ namespace C_PL.Views
             dtg_view_hd.Columns[4].Name = "Số lượng";
             dtg_view_hd.Columns[5].Name = "Thành tiền";
             dtg_view_hd.Columns[6].Name = "Mô tả";
-            dtg_view_hd.Columns[7].Name = "Ghi chú";
             dtg_view_hd.AllowUserToAddRows = false;
             LoadCbb();
             List<Ban> SortList = _banServices.GetAllBan().OrderBy(p => p.TenBan).ToList();

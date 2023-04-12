@@ -22,7 +22,7 @@ namespace C_PL.Views
             InitializeComponent();
             _nhanVienServices = new NhanVienServices();
             #region load column
-            dtg_view_nv.ColumnCount = 10;
+            dtg_view_nv.ColumnCount = 11;
             dtg_view_nv.Columns[0].Name = "Id";
             dtg_view_nv.Columns[0].Visible = false;
             dtg_view_nv.Columns[1].Name = "STT";
@@ -30,10 +30,11 @@ namespace C_PL.Views
             dtg_view_nv.Columns[3].Name = "Tên nhân viên";
             dtg_view_nv.Columns[4].Name = "Giới tính";
             dtg_view_nv.Columns[5].Name = "Số điện thoại";
-            dtg_view_nv.Columns[6].Name = "Chức vụ";
-            dtg_view_nv.Columns[7].Name = "Tài khoản";
-            dtg_view_nv.Columns[8].Name = "Mật khẩu";
-            dtg_view_nv.Columns[9].Name = "Trạng thái";
+            dtg_view_nv.Columns[6].Name = "Email";
+            dtg_view_nv.Columns[7].Name = "Chức vụ";
+            dtg_view_nv.Columns[8].Name = "Tài khoản";
+            dtg_view_nv.Columns[9].Name = "Mật khẩu";
+            dtg_view_nv.Columns[10].Name = "Trạng thái";
             dtg_view_nv.AllowUserToAddRows = false;
             #endregion
             LoadView(_nhanVienServices.GetAllNhanVien());
@@ -54,7 +55,7 @@ namespace C_PL.Views
             dtg_view_nv.Rows.Clear();
             foreach (NhanVien item in newlist)
             {
-                dtg_view_nv.Rows.Add(item.Id, ++stt, item.MaNv, item.HoTen, item.GioiTinh == 1 ? "Nam" : "Nữ", item.Sdt, item.ChucVu == 1 ? "Admin" : "Staff", item.TaiKhoan, item.MatKhau, item.TrangThai == 1 ? "Hoạt động" : "Không hoạt động");
+                dtg_view_nv.Rows.Add(item.Id, ++stt, item.MaNv, item.HoTen, item.GioiTinh == 1 ? "Nam" : "Nữ", item.Sdt, item.Email, item.ChucVu == 1 ? "Admin" : "Staff", item.TaiKhoan, item.MatKhau, item.TrangThai == 1 ? "Hoạt động" : "Không hoạt động");
             }
         }
         public void ClearFrm()
@@ -67,6 +68,7 @@ namespace C_PL.Views
             txt_sdt.Text = "";
             txt_taikhoan.Text = "";
             txt_matkhau.Text = "";
+            txt_email.Text = "";
         }
         public List<NhanVien> FindKey()
         {
@@ -83,6 +85,7 @@ namespace C_PL.Views
             nv.GioiTinh = cb_gioitinh.Text.Contains("Nam") ? 1 : 0;
             nv.ChucVu = cb_chucvu.Text.Contains("ADmin") ? 1 : 0;
             nv.Sdt = txt_sdt.Text;
+            nv.Email = txt_email.Text;
             nv.TaiKhoan = txt_taikhoan.Text;
             nv.MatKhau = txt_matkhau.Text;
             nv.TrangThai = cb_trangthai.Text.Contains("Hoạt động") ? 1 : 0;
@@ -104,6 +107,7 @@ namespace C_PL.Views
             nv.GioiTinh = cb_gioitinh.Text.Contains("Nam") ? 1 : 0;
             nv.ChucVu = cb_chucvu.Text.Contains("ADmin") ? 1 : 0;
             nv.Sdt = txt_sdt.Text;
+            nv.Email = txt_email.Text;
             nv.TaiKhoan = txt_taikhoan.Text;
             nv.MatKhau = txt_matkhau.Text;
             nv.TrangThai = cb_trangthai.Text.Contains("Hoạt động") ? 1 : 0;
@@ -144,10 +148,11 @@ namespace C_PL.Views
             txt_tennv.Text = dtg_view_nv.CurrentRow.Cells[3].Value.ToString();
             cb_gioitinh.Text = dtg_view_nv.CurrentRow.Cells[4].Value.ToString();
             txt_sdt.Text = dtg_view_nv.CurrentRow.Cells[5].Value.ToString();
-            cb_chucvu.Text = dtg_view_nv.CurrentRow.Cells[6].Value.ToString();
-            txt_taikhoan.Text = dtg_view_nv.CurrentRow.Cells[7].Value.ToString();
-            txt_matkhau.Text = dtg_view_nv.CurrentRow.Cells[8].Value.ToString();
-            cb_trangthai.Text = dtg_view_nv.CurrentRow.Cells[9].Value.ToString();
+            txt_email.Text = dtg_view_nv.CurrentRow.Cells[6].Value.ToString();
+            cb_chucvu.Text = dtg_view_nv.CurrentRow.Cells[7].Value.ToString();
+            txt_taikhoan.Text = dtg_view_nv.CurrentRow.Cells[8].Value.ToString();
+            txt_matkhau.Text = dtg_view_nv.CurrentRow.Cells[9].Value.ToString();
+            cb_trangthai.Text = dtg_view_nv.CurrentRow.Cells[10].Value.ToString();
         }
 
         private void txt_timkiem_TextChanged(object sender, EventArgs e)

@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using Microsoft.Data.SqlClient;
+using C_PL.Sub_views;
 
 namespace C_PL.Views
 {
@@ -51,6 +52,12 @@ namespace C_PL.Views
         private void MainClosed(object sender, EventArgs e)
         {
             this.Show();
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+            SubFrm_QuenMatKhau subFrm_QuenMatKhau = new SubFrm_QuenMatKhau();
+            subFrm_QuenMatKhau.Show();
         }
     }
 }

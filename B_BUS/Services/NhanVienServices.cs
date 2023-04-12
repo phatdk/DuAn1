@@ -33,9 +33,9 @@ namespace B_BUS.Services
             return respositorys.GetAllNhanVien();
         }
 
-        public NhanVien GetNhanVienByid(Guid id)
+        public NhanVien GetNhanVien(string email)
         {
-            return respositorys.GetNhanVienByid(id);
+            return respositorys.GetNhanVien(email);
         }
 
         public bool UpdateNhanVien(NhanVien obj)

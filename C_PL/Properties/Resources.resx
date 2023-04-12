@@ -127,4 +127,7 @@
   <data name="Co-be-mua-dong_-7-1536x864 (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Co-be-mua-dong_-7-1536x864 (2).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="ca-phe-rang" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ca-phe-rang.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

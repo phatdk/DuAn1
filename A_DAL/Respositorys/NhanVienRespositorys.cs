@@ -49,9 +49,9 @@ namespace A_DAL.Respositorys
 			return _context.nhanViens.ToList();
 		}
 
-		public NhanVien GetNhanVienByid(Guid id)
+		public NhanVien GetNhanVien(string email)
 		{
-			return _context.nhanViens.Find(id);
+			return _context.nhanViens.FirstOrDefault(p=>p.Email.ToLower().Equals(email.ToLower()));
 		}
 
 		public bool UpdateNhanVien(NhanVien obj)
@@ -59,16 +59,16 @@ namespace A_DAL.Respositorys
 			try
 			{
 				var idnv = _context.nhanViens.Find(obj.Id);
-				idnv.Id = obj.Id;
 				idnv.MaNv = obj.MaNv;
 				idnv.HoTen = obj.HoTen;
 				idnv.GioiTinh = obj.GioiTinh;
 				idnv.Sdt = obj.Sdt;
+				idnv.Email = obj.Email;
 				idnv.ChucVu = obj.ChucVu;
 				idnv.TaiKhoan = obj.TaiKhoan;
 				idnv.MatKhau = obj.MatKhau;
 				idnv.TrangThai = obj.TrangThai;
-				_context.nhanViens.Update(obj);
+				_context.nhanViens.Update(idnv);
 				_context.SaveChanges();
 				return true;
 			}

@@ -15,6 +15,6 @@ namespace B_BUS.IServices
 		bool UpdateNhanVien(NhanVien obj);
 
 		List<NhanVien> GetAllNhanVien();
-		NhanVien GetNhanVienByid(Guid id);
+		NhanVien GetNhanVien(string email);
 	}
 }
