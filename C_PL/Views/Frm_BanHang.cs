@@ -223,7 +223,6 @@ namespace C_PL.Views
             //addsp.Show();
             if (_idBan != Guid.Empty)
             {
-                _checkOut = false;
                 SanPham sp = (SanPham)((PictureBox)sender).Tag;
                 string input = Interaction.InputBox("Số lượng sản phẩm", sp.TenSp, "1", 500, 300);
                 HoaDonVm hoaDonVm = hd.FirstOrDefault(p => p.IdSp == sp.Id);
@@ -240,6 +239,7 @@ namespace C_PL.Views
                         temp.MoTa = sp.MoTa;
                         hd.Add(temp);
                         LoadView(hd);
+                        _checkOut = false;
                     }
                     else
                     {
@@ -251,6 +251,7 @@ namespace C_PL.Views
                         temp.MoTa = sp.MoTa;
                         hd.Add(temp);
                         LoadView(hd);
+                        _checkOut = false;
                     }
                 }
                 else if (input.Equals("0"))
@@ -259,6 +260,7 @@ namespace C_PL.Views
                     {
                         hd.Remove(hoaDonVm);
                         LoadView(hd);
+                        _checkOut = false;
                     }
                 }
             }
@@ -441,10 +443,26 @@ namespace C_PL.Views
                     int tong = int.Parse(lb_tongtien.Text);
                     lb_tongtienconlai.Text = (tong / 100 * (100 - km.PhamTramGiam)).ToString();
                 }
+                if (!(txt_tientra.Text == ""))
+                {
+                    lb_tienthua.Text = (int.Parse(txt_tientra.Text) - int.Parse(lb_tongtienconlai.Text)).ToString();
+                }
+                else
+                {
+                    lb_tienthua.Text = (0 - int.Parse(lb_tongtienconlai.Text)).ToString();
+                }
             }
             else
             {
                 lb_tongtienconlai.Text = lb_tongtien.Text;
+                if (!(txt_tientra.Text == ""))
+                {
+                    lb_tienthua.Text = (int.Parse(txt_tientra.Text) - int.Parse(lb_tongtienconlai.Text)).ToString();
+                }
+                else
+                {
+                    lb_tienthua.Text = (0 - int.Parse(lb_tongtienconlai.Text)).ToString();
+                }
             }
         }
 
@@ -477,6 +495,21 @@ namespace C_PL.Views
         {
             return _sanPhamServices.GetAllSanPham().Where(p => p.TenSp.ToLower().Contains(txt_timkiemsp.Text)).ToList();
         }
+        private void cb_loaisp_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            if (cb_loaisp.SelectedIndex == 0)
+            {
+                List<SanPham> SortListSanPham = FindKey().OrderBy(p => p.IdLoai).ToList();
+                LoadSp(SortListSanPham);
+            }
+            else
+            {
+                Guid idLoai = _loaiSpServices.GetAllLoaiSp().FirstOrDefault(p => p.TenLoai.Contains(cb_loaisp.Text)).Id;
+                List<SanPham> sanPhams = FindKey().Where(p => p.IdLoai == idLoai).ToList();
+                LoadSp(sanPhams);
+            }
+        }
+
         private void txt_timkiemsp_TextChanged(object sender, EventArgs e)
         {
             LoadSp(FindKey());
@@ -526,7 +559,5 @@ namespace C_PL.Views
                 }
             }
         }
-
-
     }
 }

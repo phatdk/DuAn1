@@ -71,7 +71,7 @@ namespace C_PL.Views
             txt_tenkm.Text = "";
             txt_dkgiam.Text = "";
             txt_mota.Text = "";
-            txt_phantram.Text = "0.00";
+            txt_phantram.Text = "0";
             txt_sotien.Text = "0";
             dtp_ngaybd.Value = DateTime.Now;
             dtp_ngaykt.Value = DateTime.Now;
