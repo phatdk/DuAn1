@@ -399,6 +399,10 @@ namespace C_PL.Views
                     }
                 }
                 MessageBox.Show("Thanh toán thành công");
+                //in hoá đơn
+                var hd = _hoaDonServices.GetHoaDonByid(_idHd).Id;
+                Frm_ThongTinHD fm = new Frm_ThongTinHD(hd);
+                fm.ShowDialog();
             }
             else MessageBox.Show("Số tiền thành toán chưa đủ");
         }
@@ -522,5 +526,7 @@ namespace C_PL.Views
                 }
             }
         }
+
+
     }
 }
