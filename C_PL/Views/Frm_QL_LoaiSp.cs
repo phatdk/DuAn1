@@ -32,6 +32,7 @@ namespace C_PL.Views
             dtg_view_loaisp.Columns[0].Visible = false;
             dtg_view_loaisp.Columns[1].Name = "Tên loại sản phẩm";
             dtg_view_loaisp.Columns[2].Name = "Mô tả";
+            dtg_view_loaisp.AllowUserToAddRows = false;
             dtg_view_loaisp.Rows.Clear();
             foreach (var item in _ilspService.GetAllLoaiSp())
             {

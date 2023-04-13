@@ -34,6 +34,7 @@ namespace C_PL.Views
             dtg_view_ban.Columns[0].Visible = false;
             dtg_view_ban.Columns[1].Name = "Tên bàn";
             dtg_view_ban.Columns[2].Name = "Trạng thái";
+            dtg_view_ban.AllowUserToAddRows = false;
             dtg_view_ban.Rows.Clear();
             foreach (var item in _ibanser.GetAllBan())
             {
@@ -106,6 +107,15 @@ namespace C_PL.Views
         {
             txt_tenban.Text = "";
             cb_trangthai.Text = "";
+        }
+
+        private void tb_TimKiem_TextChanged(object sender, EventArgs e)
+        {
+            dtg_view_ban.Rows.Clear();
+            foreach (var item in _ibanser.GetAllBan().Where(c => c.TenBan.Contains(tb_TimKiem.Text)))
+            {
+                dtg_view_ban.Rows.Add(item.TenBan, item.TrangThai);
+            }
         }
     }
 }

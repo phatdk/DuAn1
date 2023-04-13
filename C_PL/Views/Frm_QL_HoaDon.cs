@@ -1,4 +1,5 @@
-﻿using B_BUS.IServices;
+﻿using A_DAL.Models;
+using B_BUS.IServices;
 using B_BUS.Services;
 using System;
 using System.Collections.Generic;
@@ -15,14 +16,15 @@ namespace C_PL.Views
     public partial class Frm_QL_HoaDon : Form
     {
         private IHoaDonServices _IHoaDon;
-        private ISanPhamServices _ISanPham;
+        private List<HoaDon> _lst;
         private ISP_HDServices _SpHD;
+
         Guid _Id;
         public Frm_QL_HoaDon()
         {
             InitializeComponent();
             _IHoaDon = new HoaDonServices();
-            _ISanPham = new SanPhamServices();
+            _lst = _IHoaDon.GetAllHoaDon();
             _SpHD = new SP_HDServices();
             LoadHoaDon();
         }
@@ -35,11 +37,15 @@ namespace C_PL.Views
             dtg_view_hoadon.Columns[1].Name = "Ngày tạo";
             dtg_view_hoadon.Columns[2].Name = "Ngày thanh toán";
             dtg_view_hoadon.Columns[3].Name = "Id NV";
+            //dtg_view_hoadon.Columns[4].Name = "Tên KM";
             dtg_view_hoadon.Columns[4].Name = "Tổng tiền";
             dtg_view_hoadon.Columns[5].Name = "Trạng thái";
-            foreach (var item in _IHoaDon.GetAllHoaDon())
+            dtg_view_hoadon.AllowUserToAddRows = false;
+            var hd = _IHoaDon.GetAllHoaDon();
+            foreach (var item in hd)
             {
                 dtg_view_hoadon.Rows.Add(item.Id, item.NgayTao, item.NgayThanhToan, item.IdNv, item.TongTien, item.TrangThai);
+                //dtg_view_hoadon.Rows.Add(item.Id, item.NgayTao, item.NgayThanhToan, item.TenNV, item.TenKm, item.TongTien, item.TrangThai);
             }
         }
         public void LoadHoaDonCT(Guid id)
@@ -74,6 +80,19 @@ namespace C_PL.Views
             var hd = _IHoaDon.GetHoaDonByid(_Id).Id;
             Frm_ThongTinHD fm = new Frm_ThongTinHD(hd);
             fm.ShowDialog();
+        }
+
+        private void dtp_Ngay_ValueChanged(object sender, EventArgs e)
+        {
+            dtg_view_hoadon.Rows.Clear();
+
+            var hd = _IHoaDon.GetAllHoaDon().Where(c => c.NgayTao.ToString("dd-MM-yyyy") == dtp_Ngay.Value.ToString("dd-MM-yyyy")).ToList();
+
+            foreach (var h in hd)
+            {
+                dtg_view_hoadon.Rows.Add(h.Id, h.NgayTao, h.NgayThanhToan, h.IdNv, h.TongTien, h.TrangThai);
+            }
+
         }
     }
 }

@@ -36,8 +36,7 @@
             panel1 = new Panel();
             btn_inhd = new Button();
             groupBox3 = new GroupBox();
-            dateTimePicker1 = new DateTimePicker();
-            txt_timkiem = new TextBox();
+            dtp_Ngay = new DateTimePicker();
             groupBox1.SuspendLayout();
             groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dtg_view_hoadon).BeginInit();
@@ -139,8 +138,7 @@
             // 
             // groupBox3
             // 
-            groupBox3.Controls.Add(dateTimePicker1);
-            groupBox3.Controls.Add(txt_timkiem);
+            groupBox3.Controls.Add(dtp_Ngay);
             groupBox3.Dock = DockStyle.Top;
             groupBox3.Location = new Point(2, 22);
             groupBox3.Margin = new Padding(2);
@@ -151,24 +149,16 @@
             groupBox3.TabStop = false;
             groupBox3.Text = "Lọc";
             // 
-            // dateTimePicker1
+            // dtp_Ngay
             // 
-            dateTimePicker1.Format = DateTimePickerFormat.Short;
-            dateTimePicker1.Location = new Point(297, 24);
-            dateTimePicker1.Margin = new Padding(2);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(158, 27);
-            dateTimePicker1.TabIndex = 1;
-            dateTimePicker1.Value = new DateTime(2023, 3, 24, 7, 58, 49, 0);
-            // 
-            // txt_timkiem
-            // 
-            txt_timkiem.Location = new Point(22, 24);
-            txt_timkiem.Margin = new Padding(2);
-            txt_timkiem.Name = "txt_timkiem";
-            txt_timkiem.PlaceholderText = "Tìm kiếm mã nv, mã hóa đơn,...";
-            txt_timkiem.Size = new Size(262, 27);
-            txt_timkiem.TabIndex = 0;
+            dtp_Ngay.Format = DateTimePickerFormat.Short;
+            dtp_Ngay.Location = new Point(9, 24);
+            dtp_Ngay.Margin = new Padding(2);
+            dtp_Ngay.Name = "dtp_Ngay";
+            dtp_Ngay.Size = new Size(158, 27);
+            dtp_Ngay.TabIndex = 1;
+            dtp_Ngay.Value = new DateTime(2023, 3, 24, 7, 58, 49, 0);
+            dtp_Ngay.ValueChanged += dtp_Ngay_ValueChanged;
             // 
             // Frm_QL_HoaDon
             // 
@@ -186,7 +176,6 @@
             ((System.ComponentModel.ISupportInitialize)dtg_view_chitiethoadon).EndInit();
             panel1.ResumeLayout(false);
             groupBox3.ResumeLayout(false);
-            groupBox3.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -194,8 +183,7 @@
 
         private GroupBox groupBox1;
         private GroupBox groupBox3;
-        private DateTimePicker dateTimePicker1;
-        private TextBox txt_timkiem;
+        private DateTimePicker dtp_Ngay;
         private GroupBox groupBox4;
         private GroupBox groupBox2;
         private Panel panel1;

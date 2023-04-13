@@ -54,7 +54,7 @@ namespace B_BUS.Services
         {
             var sp = (from a in _context.sanPhams
                       join b in _context.loaiSps on a.IdLoai equals b.Id
-                      select new SanPhamVm()
+                      select new SanPhamVm
                       {
                           Id = a.Id,
                           TenSp = a.TenSp,
